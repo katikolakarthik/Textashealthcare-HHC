@@ -3,11 +3,11 @@
 import { motion } from 'framer-motion'
 import { ShieldCheckIcon, LockClosedIcon, UserGroupIcon, DocumentTextIcon, ServerIcon, EyeIcon } from '@heroicons/react/24/outline'
 import Image from 'next/image'
-import Header from '@/components/homepage/Header'
-import Footer from '@/components/homepage/Footer'
-import ThreeColumnSection from '@/components/homepage/ThreeColumnSection'
-import ComplianceSection from '@/components/homepage/ComplianceSection'
-import DataSecurityPractices from '@/components/security/DataSecurityPractices'
+import Header from '../homepage/Header'
+import Footer from '../homepage/Footer'
+import ThreeColumnSection from '../homepage/ThreeColumnSection'
+import ComplianceSection from '../homepage/ComplianceSection'
+import DataSecurityPractices from './DataSecurityPractices'
 
 const SecurityPage = () => {
   const securityFeatures = [

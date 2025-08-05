@@ -3,12 +3,12 @@ import React from 'react'
 
 import { motion } from 'framer-motion'
 import Image from 'next/image'
-import Header from '@/components/homepage/Header'
-import Footer from '@/components/homepage/Footer'
-import ThreeColumnSection from '@/components/homepage/ThreeColumnSection'
-import BlogPostsSection from '@/components/resources/BlogPostsSection'
-import CaseStudiesSection from '@/components/resources/CaseStudiesSection'
-import CalculatorsSection from '@/components/resources/CalculatorsSection'
+import Header from '../homepage/Header'
+import Footer from '../homepage/Footer'
+import ThreeColumnSection from '../homepage/ThreeColumnSection'
+import BlogPostsSection from './BlogPostsSection'
+import CaseStudiesSection from './CaseStudiesSection'
+import CalculatorsSection from './CalculatorsSection'
 
 const ResourcesPage = () => {
   return (

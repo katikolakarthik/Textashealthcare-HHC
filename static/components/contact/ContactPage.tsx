@@ -2,12 +2,12 @@
 
 import { motion } from 'framer-motion'
 import { PhoneIcon, BuildingOfficeIcon, EnvelopeIcon } from '@heroicons/react/24/outline'
-import Header from '@/components/homepage/Header'
-import Footer from '@/components/homepage/Footer'
-import ThreeColumnSection from '@/components/homepage/ThreeColumnSection'
-import ComplianceSection from '@/components/homepage/ComplianceSection'
-import MailingListSignup from '@/components/contact/MailingListSignup'
-import MeetingScheduler from '@/components/contact/MeetingScheduler'
+import Header from '../homepage/Header'
+import Footer from '../homepage/Footer'
+import ThreeColumnSection from '../homepage/ThreeColumnSection'
+import ComplianceSection from '../homepage/ComplianceSection'
+import MailingListSignup from './MailingListSignup'
+import MeetingScheduler from './MeetingScheduler'
 
 const ContactPage = () => {
   return (

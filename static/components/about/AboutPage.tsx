@@ -2,11 +2,11 @@
 
 import { motion } from 'framer-motion'
 import Image from 'next/image'
-import Header from '@/components/homepage/Header'
-import Footer from '@/components/homepage/Footer'
-import ThreeColumnSection from '@/components/homepage/ThreeColumnSection'
-import ComplianceSection from '@/components/homepage/ComplianceSection'
-import TeamSection from '@/components/homepage/TeamSection'
+import Header from '../homepage/Header'
+import Footer from '../homepage/Footer'
+import ThreeColumnSection from '../homepage/ThreeColumnSection'
+import ComplianceSection from '../homepage/ComplianceSection'
+import TeamSection from '../homepage/TeamSection'
 
 const AboutPage = () => {
   return (
