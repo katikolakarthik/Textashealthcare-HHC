@@ -1,0 +1,13 @@
+{
+  "name": "textras-website",
+  "version": "1.0.0",
+  "private": true,
+  "workspaces": [
+    "static"
+  ],
+  "scripts": {
+    "build": "cd static && npm run build",
+    "dev": "cd static && npm run dev",
+    "start": "cd static && npm run start"
+  }
+} 
