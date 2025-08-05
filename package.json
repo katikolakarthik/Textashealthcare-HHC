@@ -8,7 +8,6 @@
   "scripts": {
     "build": "cd static && npm install && npm run build",
     "dev": "cd static && npm run dev",
-    "start": "cd static && npm run start",
-    "install": "cd static && npm install"
+    "start": "cd static && npm run start"
   }
 } 
