@@ -6,7 +6,7 @@ import Link from 'next/link'
 
 const HeroSection = () => {
   const [currentText, setCurrentText] = useState('')
-  const fullText = 'More Growth. More Precision. More Credibility.'
+  const fullText = 'Where Accuracy Meets Integrity in Home Health Coding'
   const [textIndex, setTextIndex] = useState(0)
 
   useEffect(() => {
@@ -76,13 +76,13 @@ const HeroSection = () => {
 
             {/* Main Headline */}
             <motion.h1
-              className="text-5xl md:text-7xl font-bold text-white leading-tight"
+              className="text-white leading-tight"
               initial={{ y: 50, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
               transition={{ duration: 1, delay: 1.5 }}
             >
-              Choose the{' '}
-              <span className="block">power of more</span>
+              <span className="block text-2xl md:text-3xl font-medium">Your Reliable Partner in Home Health Coding</span>
+              <span className="block text-4xl md:text-5xl xl:text-6xl font-bold">Accurate. Compliant. Timely.</span>
             </motion.h1>
 
             {/* CTA Button */}
