@@ -7,6 +7,8 @@ import Link from 'next/link'
 
 const Header = () => {
   const [isServicesOpen, setIsServicesOpen] = useState(false)
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
+  const [isMobileServicesOpen, setIsMobileServicesOpen] = useState(false)
 
   const navItems = [
     { name: 'Services', hasDropdown: true },
@@ -23,9 +25,25 @@ const Header = () => {
     { name: 'Data Insights', href: '/services/data-insights' }
   ]
 
+  const handleMobileMenuToggle = () => {
+    setIsMobileMenuOpen(!isMobileMenuOpen)
+    if (isMobileMenuOpen) {
+      setIsMobileServicesOpen(false)
+    }
+  }
+
+  const handleMobileServicesToggle = () => {
+    setIsMobileServicesOpen(!isMobileServicesOpen)
+  }
+
+  const handleNavigationClick = () => {
+    setIsMobileMenuOpen(false)
+    setIsMobileServicesOpen(false)
+  }
+
   return (
     <motion.header 
-      className="relative z-50 glass-dark border-b border-white/10"
+      className="relative z-50 bg-dark-blue/90 backdrop-blur-sm"
       initial={{ y: -100, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.8, ease: "easeOut" }}
@@ -35,21 +53,19 @@ const Header = () => {
           {/* Logo */}
           <Link href="/">
             <motion.div 
-              className="flex items-center cursor-pointer"
+              className="flex flex-col cursor-pointer"
               initial={{ x: -50, opacity: 0 }}
               animate={{ x: 0, opacity: 1 }}
               transition={{ duration: 0.8, delay: 0.2 }}
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
-              <h1 className="text-2xl font-bold tracking-wider">
-                <span className="text-[#e91e63]">Textas</span>
-                <span className="text-[#3f51b5]"> Healthcare</span>
-              </h1>
+              <h1 className="text-2xl font-bold text-white tracking-wider">Textas</h1>
+              <p className="text-xs text-white/80 tracking-wide">Healthcare</p>
             </motion.div>
           </Link>
 
-          {/* Navigation */}
+          {/* Desktop Navigation */}
           <motion.nav 
             className="hidden md:flex items-center space-x-8"
             initial={{ x: 50, opacity: 0 }}
@@ -65,7 +81,7 @@ const Header = () => {
                     className="relative"
                   >
                     <motion.button
-                      className="text-white hover:text-primary-300 transition-colors duration-200 flex items-center space-x-1 px-4 py-2 rounded-lg hover:bg-white/10"
+                      className="text-white hover:text-white/80 transition-colors duration-200 flex items-center space-x-1"
                       whileHover={{ scale: 1.05 }}
                       whileTap={{ scale: 0.95 }}
                       initial={{ y: -20, opacity: 0 }}
@@ -80,11 +96,11 @@ const Header = () => {
                     <AnimatePresence>
                       {isServicesOpen && (
                         <motion.div
-                          initial={{ opacity: 0, y: -10, scale: 0.95 }}
-                          animate={{ opacity: 1, y: 0, scale: 1 }}
-                          exit={{ opacity: 0, y: -10, scale: 0.95 }}
+                          initial={{ opacity: 0, y: -10 }}
+                          animate={{ opacity: 1, y: 0 }}
+                          exit={{ opacity: 0, y: -10 }}
                           transition={{ duration: 0.2 }}
-                          className="absolute top-full left-0 mt-2 w-64 glass border border-white/20 rounded-xl shadow-2xl py-2 z-50 overflow-hidden"
+                          className="absolute top-full left-0 mt-2 w-64 bg-dark-blue border border-gray-700 rounded-lg shadow-lg py-2 z-50"
                         >
                           {services.map((service, serviceIndex) => (
                             <motion.div
@@ -92,11 +108,11 @@ const Header = () => {
                               initial={{ opacity: 0, x: -10 }}
                               animate={{ opacity: 1, x: 0 }}
                               transition={{ duration: 0.2, delay: serviceIndex * 0.05 }}
-                              whileHover={{ x: 5, backgroundColor: 'rgba(255, 255, 255, 0.1)' }}
+                              whileHover={{ x: 5 }}
                             >
                               <Link
                                 href={service.href}
-                                className="block px-4 py-3 text-white hover:text-primary-300 transition-all duration-200 text-sm"
+                                className="block px-4 py-3 text-white hover:bg-gray-700 transition-colors duration-200 text-sm"
                                 onClick={() => setIsServicesOpen(false)}
                               >
                                 {service.name}
@@ -108,34 +124,35 @@ const Header = () => {
                     </AnimatePresence>
                   </motion.div>
                 ) : (
-                  <Link href={item.name === 'Data Security' ? '/security' : 
-                              item.name === 'Resources' ? '/resources' : 
-                              item.name === 'About' ? '/about' : 
-                              item.name === 'Contact us' ? '/contact' : '#'}>
-                    <motion.button
-                      className="text-white hover:text-primary-300 transition-colors duration-200 px-4 py-2 rounded-lg hover:bg-white/10"
+                  <Link
+                    href={item.name === "Data Security" ? "/security" : item.name === "Resources" ? "/resources" : item.name === "About" ? "/about" : item.name === "Contact us" ? "/contact" : "#"}
+                    className="text-white hover:text-white/80 transition-colors duration-200 flex items-center space-x-1"
+                  >
+                    <motion.span
+                      className="text-sm font-medium"
                       whileHover={{ scale: 1.05 }}
                       whileTap={{ scale: 0.95 }}
                       initial={{ y: -20, opacity: 0 }}
                       animate={{ y: 0, opacity: 1 }}
                       transition={{ duration: 0.5, delay: 0.6 + index * 0.1 }}
                     >
-                      <span className="text-sm font-medium">{item.name}</span>
-                    </motion.button>
+                      {item.name}
+                    </motion.span>
                   </Link>
                 )}
               </div>
             ))}
           </motion.nav>
 
-          {/* Mobile Menu Button */}
+          {/* Mobile menu button */}
           <motion.button
-            className="md:hidden text-white p-2 rounded-lg hover:bg-white/10 transition-colors duration-200"
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
+            className="md:hidden text-white"
+            whileHover={{ scale: 1.1 }}
+            whileTap={{ scale: 0.9 }}
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.5, delay: 0.8 }}
+            onClick={handleMobileMenuToggle}
           >
             <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
@@ -143,6 +160,81 @@ const Header = () => {
           </motion.button>
         </div>
       </div>
+
+      {/* Mobile Menu */}
+      <AnimatePresence>
+        {isMobileMenuOpen && (
+          <motion.div
+            initial={{ opacity: 0, height: 0 }}
+            animate={{ opacity: 1, height: 'auto' }}
+            exit={{ opacity: 0, height: 0 }}
+            transition={{ duration: 0.3 }}
+            className="md:hidden bg-dark-blue border-t border-gray-700"
+          >
+            <div className="px-4 py-6 space-y-4">
+              {navItems.map((item, index) => (
+                <motion.div
+                  key={item.name}
+                  initial={{ opacity: 0, x: -20 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{ duration: 0.3, delay: index * 0.1 }}
+                >
+                  {item.hasDropdown ? (
+                    <div>
+                      <motion.button
+                        onClick={handleMobileServicesToggle}
+                        className="w-full text-left text-white hover:text-white/80 transition-colors duration-200 flex items-center justify-between py-2"
+                        whileTap={{ scale: 0.95 }}
+                      >
+                        <span className="text-sm font-medium">{item.name}</span>
+                        <ChevronDownIcon className={`w-4 h-4 transition-transform duration-200 ${isMobileServicesOpen ? 'rotate-180' : ''}`} />
+                      </motion.button>
+                      
+                      {/* Mobile Services Dropdown */}
+                      <AnimatePresence>
+                        {isMobileServicesOpen && (
+                          <motion.div
+                            initial={{ opacity: 0, height: 0 }}
+                            animate={{ opacity: 1, height: 'auto' }}
+                            exit={{ opacity: 0, height: 0 }}
+                            transition={{ duration: 0.2 }}
+                            className="ml-4 mt-2 space-y-2"
+                          >
+                            {services.map((service, serviceIndex) => (
+                              <motion.div
+                                key={service.name}
+                                initial={{ opacity: 0, x: -10 }}
+                                animate={{ opacity: 1, x: 0 }}
+                                transition={{ duration: 0.2, delay: serviceIndex * 0.05 }}
+                              >
+                                <Link
+                                  href={service.href}
+                                  className="block py-2 text-white/80 hover:text-white transition-colors duration-200 text-sm"
+                                  onClick={handleNavigationClick}
+                                >
+                                  {service.name}
+                                </Link>
+                              </motion.div>
+                            ))}
+                          </motion.div>
+                        )}
+                      </AnimatePresence>
+                    </div>
+                  ) : (
+                    <Link
+                      href={item.name === "Data Security" ? "/security" : item.name === "Resources" ? "/resources" : item.name === "About" ? "/about" : item.name === "Contact us" ? "/contact" : "#"}
+                      className="block text-white hover:text-white/80 transition-colors duration-200 py-2"
+                      onClick={handleNavigationClick}
+                    >
+                      <span className="text-sm font-medium">{item.name}</span>
+                    </Link>
+                  )}
+                </motion.div>
+              ))}
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </motion.header>
   )
 }
