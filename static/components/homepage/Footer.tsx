@@ -18,17 +18,13 @@ const Footer = () => {
     {
       title: "Resources",
       links: [
-        { name: "Data Security", href: "/security" },
-        { name: "Blog", href: "/blog" },
-        { name: "Case Studies", href: "/case-studies" },
-        { name: "Calculators", href: "/calculators" }
+        { name: "Data Security", href: "/security" }
       ]
     },
     {
       title: "Company",
       links: [
         { name: "About us", href: "/about" },
-        { name: "Careers", href: "/careers" },
         { name: "Contact us", href: "/contact" }
       ]
     },
@@ -220,7 +216,7 @@ const Footer = () => {
                     href="tel:+919701674974"
                     className="font-bold text-white hover:text-pink-400 transition-colors duration-300"
                   >
-                    +91 9701674974
+                    +91 7337410473 
                   </a>
                 </p>
               </div>
@@ -257,27 +253,7 @@ const Footer = () => {
         {/* Copyright Bar */}
         <div className="border-t border-gray-700 pt-6 mt-12">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
-            {/* Left - Policy Links */}
-            <motion.div
-              className="flex space-x-6"
-              initial={{ y: 20, opacity: 0 }}
-              whileInView={{ y: 0, opacity: 1 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
-            >
-              <Link
-                href="/privacy-policy"
-                className="text-gray-300 hover:text-white transition-colors duration-300 text-sm"
-              >
-                Privacy Policy
-              </Link>
-              <Link
-                href="/csr-statement"
-                className="text-gray-300 hover:text-white transition-colors duration-300 text-sm"
-              >
-                CSR Statement
-              </Link>
-            </motion.div>
+
 
             {/* Center - Copyright */}
             <motion.div
@@ -288,15 +264,7 @@ const Footer = () => {
               viewport={{ once: true }}
             >
               <p className="text-gray-300 text-sm">
-                Copyright © 2025 Textas Healthcare. Enabled by{' '}
-                <a
-                  href=""
-                  className="underline hover:text-white transition-colors duration-300"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Tier2 Digital
-                </a>
+                Copyright © 2025 Textas Healthcare.
               </p>
             </motion.div>
 

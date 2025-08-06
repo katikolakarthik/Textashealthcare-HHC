@@ -127,16 +127,7 @@ export default function DataInsights() {
                   With a team of data scientists offering insights to lead in the digital world, high investment costs and complexities in evolving analytics technologies don't have to prevent your organization from reaping the benefits of data.
                 </p>
                 
-                {/* Call-to-Action Button */}
-                <Link href="/contact">
-                  <motion.button 
-                    className="inline-flex items-center justify-center px-8 py-4 bg-blue-600 text-white font-semibold rounded-full shadow-lg hover:bg-blue-700 transition-colors duration-300 w-fit"
-                    whileHover={{ scale: 1.05 }}
-                    whileTap={{ scale: 0.95 }}
-                  >
-                    Let's Connect
-                  </motion.button>
-                </Link>
+
               </div>
               
               {/* Right side - Circular image centered */}
