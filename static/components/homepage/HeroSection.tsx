@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion'
 import { useState, useEffect } from 'react'
+import Link from 'next/link'
 
 const HeroSection = () => {
   const [currentText, setCurrentText] = useState('')
@@ -90,13 +91,15 @@ const HeroSection = () => {
               animate={{ y: 0, opacity: 1 }}
               transition={{ duration: 0.8, delay: 2 }}
             >
-              <motion.button
-                className="px-8 py-4 border-2 border-white text-white font-medium rounded-lg hover:bg-white hover:text-dark-blue transition-all duration-300"
-                whileHover={{ scale: 1.05, boxShadow: "0 10px 30px rgba(255,255,255,0.2)" }}
-                whileTap={{ scale: 0.95 }}
-              >
-                Know More
-              </motion.button>
+              <Link href="/contact">
+                <motion.button
+                  className="px-8 py-4 border-2 border-white text-white font-medium rounded-lg hover:bg-white hover:text-dark-blue transition-all duration-300"
+                  whileHover={{ scale: 1.05, boxShadow: "0 10px 30px rgba(255,255,255,0.2)" }}
+                  whileTap={{ scale: 0.95 }}
+                >
+                  Know More
+                </motion.button>
+              </Link>
             </motion.div>
           </motion.div>
 

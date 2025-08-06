@@ -13,7 +13,7 @@ import OutsourcingSection from '../components/homepage/OutsourcingSection'
 import WhatsNewSection from '../components/homepage/WhatsNewSection'
 import ExperienceCarouselSection from '../components/homepage/ExperienceCarouselSection'
 import TestimonialsSection from '../components/homepage/TestimonialsSection'
-import TeamSection from '../components/homepage/TeamSection'
+// import TeamSection from '../components/homepage/TeamSection'
 import PowerOfMoreSection from '../components/homepage/PowerOfMoreSection'
 import ComplianceSection from '../components/homepage/ComplianceSection'
 import ThreeColumnSection from '../components/homepage/ThreeColumnSection'
@@ -37,7 +37,7 @@ export default function Home() {
         <WhatsNewSection />
         <ExperienceCarouselSection />
         <TestimonialsSection />
-        <TeamSection />
+        {/* <TeamSection /> */}
         <PowerOfMoreSection />
         <ComplianceSection />
         <ThreeColumnSection />

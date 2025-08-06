@@ -1,79 +1,98 @@
-# REDROAD Hero Component
+# TEXTAS Healthcare Hero Component
 
-A modern, animated hero section component built with Next.js, Tailwind CSS, and Framer Motion.
+A modern, responsive hero section component built with Next.js, TypeScript, and Framer Motion.
 
 ## Features
 
-- 🎨 **Exact Design Match**: Replicates the REDROAD hero section with precise styling
-- ✨ **Smooth Animations**: Framer Motion animations for text typing, element entrance, and hover effects
-- 📱 **Responsive Design**: Fully responsive across all device sizes
-- 🎯 **Interactive Elements**: Hover effects and smooth transitions
-- 🎭 **Typewriter Effect**: Animated text typing for the tagline
-- 🎨 **Custom Graphics**: Animated red shape and diagonal line patterns
-
-## Tech Stack
-
-- **Next.js 14** - React framework
-- **Tailwind CSS** - Utility-first CSS framework
-- **Framer Motion** - Animation library
-- **TypeScript** - Type safety
-- **Heroicons** - Icon library
+- 🎨 **Exact Design Match**: Replicates the TEXTAS Healthcare hero section with precise styling
+- 📱 **Fully Responsive**: Optimized for all device sizes
+- ⚡ **Performance Optimized**: Built with Next.js 14 and optimized for speed
+- 🎭 **Smooth Animations**: Powered by Framer Motion for engaging interactions
+- 🎯 **TypeScript**: Full type safety and better development experience
+- 🎨 **Tailwind CSS**: Utility-first CSS framework for rapid styling
 
 ## Getting Started
 
-1. **Install dependencies:**
-   ```bash
-   npm install
-   ```
+### Prerequisites
 
-2. **Run the development server:**
-   ```bash
-   npm run dev
-   ```
+- Node.js 18+ 
+- npm or yarn
 
-3. **Open your browser:**
-   Navigate to [http://localhost:3000](http://localhost:3000)
+### Installation
 
-## Component Structure
+1. Clone the repository
+```bash
+git clone <repository-url>
+cd textas-healthcare
+```
 
-- `components/Header.tsx` - Navigation header with logo and menu
-- `components/HeroSection.tsx` - Main hero section with animations
-- `app/page.tsx` - Main page that combines all components
+2. Install dependencies
+```bash
+npm install
+```
 
-## Key Features
+3. Run the development server
+```bash
+npm run dev
+```
 
-### Animations
-- **Header**: Slides in from top with staggered navigation items
-- **Hero Text**: Typewriter effect for tagline
-- **Headline**: Slides up with fade-in effect
-- **CTA Button**: Hover animations with scale and shadow effects
-- **Graphics**: Red shape rotates and scales in, diagonal lines fade in
+4. Open [http://localhost:3000](http://localhost:3000) in your browser
 
-### Responsive Design
-- Mobile-first approach
-- Collapsible navigation for mobile
-- Responsive typography and spacing
-- Adaptive layout for different screen sizes
+## Project Structure
 
-### Interactive Elements
-- Hover effects on navigation items
-- Button hover animations
-- Smooth transitions throughout
+```
+├── app/
+│   ├── globals.css
+│   ├── layout.tsx
+│   └── page.tsx
+├── components/
+│   └── homepage/
+│       ├── Header.tsx
+│       ├── HeroSection.tsx
+│       ├── PowerOfMoreSection.tsx
+│       ├── PainPointsSection.tsx
+│       ├── OurServicesSection.tsx
+│       ├── ScrollAnimationSection.tsx
+│       ├── ScrollAnimationSection2.tsx
+│       ├── ScrollAnimationSection3.tsx
+│       ├── WhoWeAreSection.tsx
+│       ├── TeamSection.tsx
+│       ├── ThreeColumnSection.tsx
+│       └── Footer.tsx
+├── public/
+└── package.json
+```
+
+## Available Scripts
+
+- `npm run dev` - Start development server
+- `npm run build` - Build for production
+- `npm run start` - Start production server
+- `npm run lint` - Run ESLint
+
+## Technologies Used
+
+- **Next.js 14** - React framework
+- **TypeScript** - Type safety
+- **Tailwind CSS** - Utility-first CSS
+- **Framer Motion** - Animation library
+- **Heroicons** - Icon library
 
 ## Customization
 
-The component uses custom Tailwind colors defined in `tailwind.config.js`:
-- `dark-blue`: `#0f172a`
-- `accent-red`: `#dc2626`
+### Colors
+The component uses a custom color palette defined in `tailwind.config.js`:
 
-You can easily modify colors, animations, and content by editing the respective component files.
-
-## Build for Production
-
-```bash
-npm run build
-npm start
+```javascript
+colors: {
+  'dark-blue': '#0f172a',
+  'accent-red': '#dc2626',
+  // ... other colors
+}
 ```
+
+### Animations
+All animations are powered by Framer Motion and can be customized in each component file.
 
 ## Deployment
 
@@ -89,4 +108,4 @@ This project is optimized for Vercel deployment. See [DEPLOYMENT.md](./DEPLOYMEN
 
 ## License
 
-MIT License - feel free to use this component in your projects! 
+This project is licensed under the MIT License. 

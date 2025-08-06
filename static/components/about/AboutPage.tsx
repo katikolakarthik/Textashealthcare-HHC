@@ -6,7 +6,7 @@ import Header from '../homepage/Header'
 import Footer from '../homepage/Footer'
 import ThreeColumnSection from '../homepage/ThreeColumnSection'
 import ComplianceSection from '../homepage/ComplianceSection'
-import TeamSection from '../homepage/TeamSection'
+// import TeamSection from '../homepage/TeamSection'
 
 const AboutPage = () => {
   return (
@@ -175,7 +175,7 @@ const AboutPage = () => {
       </section>
 
       {/* Team Section */}
-      <TeamSection />
+      {/* <TeamSection /> */}
 
       {/* Three Column Section */}
       <ThreeColumnSection />

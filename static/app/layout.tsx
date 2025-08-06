@@ -5,8 +5,8 @@ import './globals.css'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: 'REDROAD - Healthcare Business Solutions',
-  description: 'Choose the power of more. More Growth. More Precision. More Credibility.',
+  title: 'TEXTAS Healthcare - Healthcare Business Solutions',
+  description: 'Healthcare Business Solutions',
 }
 
 export default function RootLayout({

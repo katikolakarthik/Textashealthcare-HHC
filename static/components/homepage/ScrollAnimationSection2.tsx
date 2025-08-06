@@ -3,6 +3,7 @@
 import { motion, useInView } from 'framer-motion'
 import { useRef } from 'react'
 import Image from 'next/image'
+import Link from 'next/link'
 
 const ScrollAnimationSection2 = () => {
   const ref = useRef(null)
@@ -64,13 +65,15 @@ const ScrollAnimationSection2 = () => {
               animate={isInView ? { y: 0, opacity: 1 } : { y: 30, opacity: 0 }}
               transition={{ duration: 0.8, delay: 1 }}
             >
-              <motion.button
-                className="px-8 py-4 bg-blue-600 text-white font-medium rounded-lg hover:bg-blue-700 transition-all duration-300"
-                whileHover={{ scale: 1.05, boxShadow: "0 10px 30px rgba(37, 99, 235, 0.3)" }}
-                whileTap={{ scale: 0.95 }}
-              >
-                Learn more
-              </motion.button>
+              <Link href="/services/revenue-cycle-management">
+                <motion.button
+                  className="px-8 py-4 bg-blue-600 text-white font-medium rounded-lg hover:bg-blue-700 transition-all duration-300"
+                  whileHover={{ scale: 1.05, boxShadow: "0 10px 30px rgba(37, 99, 235, 0.3)" }}
+                  whileTap={{ scale: 0.95 }}
+                >
+                  Learn more
+                </motion.button>
+              </Link>
             </motion.div>
           </motion.div>
 

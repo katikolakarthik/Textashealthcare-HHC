@@ -224,7 +224,7 @@ const ContactPage = () => {
               <div className="flex justify-center mb-4">
                 <EnvelopeIcon className="w-8 h-8 text-white" />
               </div>
-              <p className="text-white font-semibold">info@redroad.in</p>
+              <p className="text-white font-semibold">info@textashealthcare.in</p>
             </motion.div>
 
             {/* Registered Office */}

@@ -116,19 +116,17 @@ const WhoWeAreSection = () => {
               {/* Video Frame */}
               <div className="relative bg-gray-100 rounded-lg shadow-2xl overflow-hidden">
                 <div className="aspect-video">
-                  <video
+                  <iframe
                     width="100%"
                     height="100%"
-                    controls
-                    className="w-full h-full object-cover"
-                    poster="https://res.cloudinary.com/dnomrmyzh/video/upload/v1754454787/WhatsApp_Video_2025-08-05_at_22.06.50_d82aed84_nna9ds.mp4"
-                  >
-                    <source 
-                      src="https://res.cloudinary.com/dnomrmyzh/video/upload/v1754454787/WhatsApp_Video_2025-08-05_at_22.06.50_d82aed84_nna9ds.mp4" 
-                      type="video/mp4" 
-                    />
-                    Your browser does not support the video tag.
-                  </video>
+                    src="https://www.youtube.com/embed/OrU7o9TejTk?si=I1lecCnPnke1D4pw"
+                    title="YouTube video player"
+                    frameBorder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerPolicy="strict-origin-when-cross-origin"
+                    allowFullScreen
+                    className="w-full h-full"
+                  />
                 </div>
                 
                 {/* Video Overlay Elements */}
@@ -142,7 +140,7 @@ const WhoWeAreSection = () => {
                   <div className="w-8 h-8 bg-blue-600 rounded-full flex items-center justify-center">
                     <span className="text-white font-bold text-sm">R</span>
                   </div>
-                  <span className="text-white text-sm font-medium">Redroad services</span>
+                  <span className="text-white text-sm font-medium">TEXTAS Healthcare services</span>
                 </motion.div>
 
                 <motion.div
@@ -160,7 +158,7 @@ const WhoWeAreSection = () => {
                   </div>
                 </motion.div>
 
-                {/* Play Video Button */}
+                {/* Watch on YouTube Button */}
                 <motion.button
                   className="absolute top-4 right-4 bg-black text-white px-4 py-2 rounded text-sm font-medium hover:bg-gray-800 transition-colors duration-200"
                   initial={{ opacity: 0, scale: 0.9 }}
@@ -169,7 +167,7 @@ const WhoWeAreSection = () => {
                   transition={{ duration: 0.5, delay: 1 }}
                   viewport={{ once: true }}
                 >
-                  Play Video
+                  Watch on YouTube
                 </motion.button>
               </div>
             </div>

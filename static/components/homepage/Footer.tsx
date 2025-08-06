@@ -2,33 +2,34 @@
 
 import { motion } from 'framer-motion'
 import { PhoneIcon, GlobeAltIcon, EnvelopeIcon } from '@heroicons/react/24/outline'
+import Link from 'next/link'
 
 const Footer = () => {
   const footerSections = [
     {
       title: "Services",
       links: [
-        "Coding & OASIS Review",
-        "Clinical Documentation Review",
-        "Revenue Cycle Management",
-        "Data Insights"
+        { name: "Coding & OASIS Review", href: "/services/coding-oasis-review" },
+        { name: "Clinical Documentation Review", href: "/services/clinical-documentation-review" },
+        { name: "Revenue Cycle Management", href: "/services/revenue-cycle-management" },
+        { name: "Data Insights", href: "/services/data-insights" }
       ]
     },
     {
       title: "Resources",
       links: [
-        "Data Security",
-        "Blog",
-        "Case Studies",
-        "Calculators"
+        { name: "Data Security", href: "/security" },
+        { name: "Blog", href: "/blog" },
+        { name: "Case Studies", href: "/case-studies" },
+        { name: "Calculators", href: "/calculators" }
       ]
     },
     {
       title: "Company",
       links: [
-        "About us",
-        "Careers",
-        "Contact us"
+        { name: "About us", href: "/about" },
+        { name: "Careers", href: "/careers" },
+        { name: "Contact us", href: "/contact" }
       ]
     },
     {
@@ -36,8 +37,7 @@ const Footer = () => {
       contact: {
         email: "info@textashealthcare.in",
         phone: {
-          india: "+91 6281802796",
-          us: "+1 201 778 9240"
+          india: "+91 6281802796"
         }
       }
     }
@@ -86,12 +86,12 @@ const Footer = () => {
                       transition={{ duration: 0.4, delay: 0.6 + index * 0.1 + linkIndex * 0.05 }}
                       viewport={{ once: true }}
                     >
-                                             <a
-                         href={link === "Data Security" ? "/security" : "#"}
-                         className="text-gray-300 hover:text-white transition-colors duration-300 text-sm"
-                       >
-                         {link}
-                       </a>
+                      <Link
+                        href={link.href}
+                        className="text-gray-300 hover:text-white transition-colors duration-300 text-sm"
+                      >
+                        {link.name}
+                      </Link>
                     </motion.li>
                   ))}
                 </motion.ul>
@@ -134,13 +134,7 @@ const Footer = () => {
                         href={`tel:${section.contact.phone.india}`}
                         className="block text-gray-300 hover:text-white transition-colors duration-300 text-sm"
                       >
-                        IND: {section.contact.phone.india}
-                      </a>
-                      <a
-                        href={`tel:${section.contact.phone.us}`}
-                        className="block text-gray-300 hover:text-white transition-colors duration-300 text-sm"
-                      >
-                        US: {section.contact.phone.us}
+                        {section.contact.phone.india}
                       </a>
                     </div>
                   </motion.div>
@@ -215,7 +209,19 @@ const Footer = () => {
               <div className="text-left">
                 <p className="text-gray-300">
                   Call Us{' '}
-                  <span className="font-bold text-white">+91 6281802796</span>
+                  <a
+                    href="tel:+916281802796"
+                    className="font-bold text-white hover:text-pink-400 transition-colors duration-300"
+                  >
+                    +91 6281802796
+                  </a>
+                  {' '}
+                  <a
+                    href="tel:+919701674974"
+                    className="font-bold text-white hover:text-pink-400 transition-colors duration-300"
+                  >
+                    +91 9701674974
+                  </a>
                 </p>
               </div>
             </motion.div>
@@ -234,9 +240,14 @@ const Footer = () => {
               <div className="text-left">
                 <p className="text-gray-300">
                   For More Information at{' '}
-                  <span className="font-bold text-white">
+                  <a
+                    href="https://www.textashealthcare.in"
+                    className="font-bold text-white hover:text-pink-400 transition-colors duration-300"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
                     www.textashealthcare.in
-                  </span>
+                  </a>
                 </p>
               </div>
             </motion.div>
@@ -254,18 +265,18 @@ const Footer = () => {
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
             >
-              <a
+              <Link
                 href="/privacy-policy"
                 className="text-gray-300 hover:text-white transition-colors duration-300 text-sm"
               >
                 Privacy Policy
-              </a>
-              <a
+              </Link>
+              <Link
                 href="/csr-statement"
                 className="text-gray-300 hover:text-white transition-colors duration-300 text-sm"
               >
                 CSR Statement
-              </a>
+              </Link>
             </motion.div>
 
             {/* Center - Copyright */}
@@ -277,9 +288,9 @@ const Footer = () => {
               viewport={{ once: true }}
             >
               <p className="text-gray-300 text-sm">
-                Copyright © 2023 Textas Healthcare. Enabled by{' '}
+                Copyright © 2025 Textas Healthcare. Enabled by{' '}
                 <a
-                  href="https://tier2digital.com"
+                  href=""
                   className="underline hover:text-white transition-colors duration-300"
                   target="_blank"
                   rel="noopener noreferrer"
@@ -290,7 +301,7 @@ const Footer = () => {
             </motion.div>
 
             {/* Right - Social Media */}
-            <motion.div
+            {/* <motion.div
               className="flex justify-center md:justify-end"
               initial={{ y: 20, opacity: 0 }}
               whileInView={{ y: 0, opacity: 1 }}
@@ -305,7 +316,7 @@ const Footer = () => {
               >
                 <span className="text-white font-bold text-xs">in</span>
               </a>
-            </motion.div>
+            </motion.div> */}
           </div>
         </div>
       </div>
