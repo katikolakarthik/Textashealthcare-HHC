@@ -15,9 +15,38 @@ const PainPointsSection = () => {
   ]
 
   return (
-    <section className="relative py-20 bg-gray-50 overflow-hidden">
+    <section className="relative py-20 bg-gradient-to-br from-neutral-50 via-primary-50 to-secondary-50 overflow-hidden">
+      {/* Background decorative elements */}
+      <div className="absolute inset-0">
+        <motion.div
+          className="absolute top-1/4 left-1/4 w-64 h-64 bg-gradient-to-r from-primary-200 to-secondary-200 rounded-full opacity-20 blur-3xl"
+          animate={{ 
+            scale: [1, 1.2, 1],
+            rotate: [0, 180, 360]
+          }}
+          transition={{ 
+            duration: 20,
+            repeat: Infinity,
+            ease: "linear"
+          }}
+        />
+        
+        <motion.div
+          className="absolute bottom-1/4 right-1/4 w-48 h-48 bg-gradient-to-r from-accent-200 to-primary-200 rounded-full opacity-15 blur-3xl"
+          animate={{ 
+            scale: [1, 0.8, 1],
+            rotate: [360, 180, 0]
+          }}
+          transition={{ 
+            duration: 25,
+            repeat: Infinity,
+            ease: "linear"
+          }}
+        />
+      </div>
+
       {/* Content */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center space-y-12">
           
           {/* Text Content */}
@@ -30,18 +59,19 @@ const PainPointsSection = () => {
           >
             {/* Main Heading */}
             <motion.h2
-              className="text-4xl md:text-5xl font-bold text-gray-900 leading-tight"
+              className="text-4xl md:text-5xl font-bold text-neutral-900 leading-tight"
               initial={{ y: 20, opacity: 0 }}
               whileInView={{ y: 0, opacity: 1 }}
               transition={{ duration: 0.8, delay: 0.2 }}
               viewport={{ once: true }}
             >
-              What's weighing you down?
+              What's weighing you{' '}
+              <span className="gradient-text">down?</span>
             </motion.h2>
 
             {/* Description */}
             <motion.p
-              className="text-lg md:text-xl text-gray-700 max-w-3xl mx-auto leading-relaxed"
+              className="text-lg md:text-xl text-neutral-700 max-w-3xl mx-auto leading-relaxed"
               initial={{ y: 20, opacity: 0 }}
               whileInView={{ y: 0, opacity: 1 }}
               transition={{ duration: 0.8, delay: 0.4 }}
@@ -66,15 +96,15 @@ const PainPointsSection = () => {
                 return (
                   <Link key={index} href="/services/revenue-cycle-management">
                     <motion.div
-                      className="bg-white border border-gray-200 rounded-lg p-6 hover:bg-dark-blue hover:border-dark-blue hover:shadow-xl transition-all duration-300 cursor-pointer group"
+                      className="modern-card rounded-2xl p-6 hover:bg-gradient-to-br hover:from-primary-500 hover:to-secondary-500 hover:shadow-2xl transition-all duration-500 cursor-pointer group"
                       initial={{ y: 30, opacity: 0 }}
                       whileInView={{ y: 0, opacity: 1 }}
                       transition={{ duration: 0.6, delay: 0.8 + index * 0.1 }}
                       viewport={{ once: true }}
-                      whileHover={{ scale: 1.02, y: -2 }}
+                      whileHover={{ scale: 1.05, y: -8 }}
                     >
                       <div className="flex items-center justify-between">
-                        <div className="text-gray-900 group-hover:text-white transition-colors duration-200">
+                        <div className="text-neutral-900 group-hover:text-white transition-colors duration-300">
                           <h3 className="text-lg font-bold leading-tight">
                             {point.split(' ')[0]}
                           </h3>
@@ -82,11 +112,12 @@ const PainPointsSection = () => {
                             {point.split(' ').slice(1).join(' ')}
                           </h3>
                         </div>
-                        <div className="w-10 h-10 bg-white border border-gray-300 rounded-full flex items-center justify-center group-hover:bg-accent-red group-hover:border-white group-hover:scale-110 transition-all duration-200">
-                          <svg className="w-5 h-5 text-gray-600 group-hover:text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 17L17 7M17 7H7M17 7V17" />
-                          </svg>
-                        </div>
+                        <motion.div 
+                          className="w-12 h-12 bg-gradient-to-br from-primary-400 to-secondary-400 rounded-full flex items-center justify-center group-hover:scale-110 group-hover:rotate-12 transition-all duration-300"
+                          whileHover={{ rotate: 12 }}
+                        >
+                          <ArrowRightIcon className="w-6 h-6 text-white" />
+                        </motion.div>
                       </div>
                     </motion.div>
                   </Link>
@@ -98,15 +129,15 @@ const PainPointsSection = () => {
                 return (
                   <Link key={index} href="/services/clinical-documentation-review">
                     <motion.div
-                      className="bg-white border border-gray-200 rounded-lg p-6 hover:bg-dark-blue hover:border-dark-blue hover:shadow-xl transition-all duration-300 cursor-pointer group"
+                      className="modern-card rounded-2xl p-6 hover:bg-gradient-to-br hover:from-primary-500 hover:to-secondary-500 hover:shadow-2xl transition-all duration-500 cursor-pointer group"
                       initial={{ y: 30, opacity: 0 }}
                       whileInView={{ y: 0, opacity: 1 }}
                       transition={{ duration: 0.6, delay: 0.8 + index * 0.1 }}
                       viewport={{ once: true }}
-                      whileHover={{ scale: 1.02, y: -2 }}
+                      whileHover={{ scale: 1.05, y: -8 }}
                     >
                       <div className="flex items-center justify-between">
-                        <div className="text-gray-900 group-hover:text-white transition-colors duration-200">
+                        <div className="text-neutral-900 group-hover:text-white transition-colors duration-300">
                           <h3 className="text-lg font-bold leading-tight">
                             {point.split(' ')[0]}
                           </h3>
@@ -114,11 +145,12 @@ const PainPointsSection = () => {
                             {point.split(' ').slice(1).join(' ')}
                           </h3>
                         </div>
-                        <div className="w-10 h-10 bg-white border border-gray-300 rounded-full flex items-center justify-center group-hover:bg-accent-red group-hover:border-white group-hover:scale-110 transition-all duration-200">
-                          <svg className="w-5 h-5 text-gray-600 group-hover:text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 17L17 7M17 7H7M17 7V17" />
-                          </svg>
-                        </div>
+                        <motion.div 
+                          className="w-12 h-12 bg-gradient-to-br from-primary-400 to-secondary-400 rounded-full flex items-center justify-center group-hover:scale-110 group-hover:rotate-12 transition-all duration-300"
+                          whileHover={{ rotate: 12 }}
+                        >
+                          <ArrowRightIcon className="w-6 h-6 text-white" />
+                        </motion.div>
                       </div>
                     </motion.div>
                   </Link>
@@ -130,15 +162,15 @@ const PainPointsSection = () => {
                 return (
                   <Link key={index} href="/services/data-insights">
                     <motion.div
-                      className="bg-white border border-gray-200 rounded-lg p-6 hover:bg-dark-blue hover:border-dark-blue hover:shadow-xl transition-all duration-300 cursor-pointer group"
+                      className="modern-card rounded-2xl p-6 hover:bg-gradient-to-br hover:from-primary-500 hover:to-secondary-500 hover:shadow-2xl transition-all duration-500 cursor-pointer group"
                       initial={{ y: 30, opacity: 0 }}
                       whileInView={{ y: 0, opacity: 1 }}
                       transition={{ duration: 0.6, delay: 0.8 + index * 0.1 }}
                       viewport={{ once: true }}
-                      whileHover={{ scale: 1.02, y: -2 }}
+                      whileHover={{ scale: 1.05, y: -8 }}
                     >
                       <div className="flex items-center justify-between">
-                        <div className="text-gray-900 group-hover:text-white transition-colors duration-200">
+                        <div className="text-neutral-900 group-hover:text-white transition-colors duration-300">
                           <h3 className="text-lg font-bold leading-tight">
                             {point.split(' ')[0]}
                           </h3>
@@ -146,44 +178,46 @@ const PainPointsSection = () => {
                             {point.split(' ').slice(1).join(' ')}
                           </h3>
                         </div>
-                        <div className="w-10 h-10 bg-white border border-gray-300 rounded-full flex items-center justify-center group-hover:bg-accent-red group-hover:border-white group-hover:scale-110 transition-all duration-200">
-                          <svg className="w-5 h-5 text-gray-600 group-hover:text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 17L17 7M17 7H7M17 7V17" />
-                          </svg>
-                        </div>
+                        <motion.div 
+                          className="w-12 h-12 bg-gradient-to-br from-primary-400 to-secondary-400 rounded-full flex items-center justify-center group-hover:scale-110 group-hover:rotate-12 transition-all duration-300"
+                          whileHover={{ rotate: 12 }}
+                        >
+                          <ArrowRightIcon className="w-6 h-6 text-white" />
+                        </motion.div>
                       </div>
                     </motion.div>
                   </Link>
                 )
               }
               
-              // All other buttons redirect to coding-oasis-review
+              // Default case - first two buttons redirect to coding-oasis-review
               return (
                 <Link key={index} href="/services/coding-oasis-review">
-              <motion.div
-                className="bg-white border border-gray-200 rounded-lg p-6 hover:bg-dark-blue hover:border-dark-blue hover:shadow-xl transition-all duration-300 cursor-pointer group"
-                initial={{ y: 30, opacity: 0 }}
-                whileInView={{ y: 0, opacity: 1 }}
-                transition={{ duration: 0.6, delay: 0.8 + index * 0.1 }}
-                viewport={{ once: true }}
-                whileHover={{ scale: 1.02, y: -2 }}
-              >
-                <div className="flex items-center justify-between">
-                  <div className="text-gray-900 group-hover:text-white transition-colors duration-200">
-                    <h3 className="text-lg font-bold leading-tight">
-                      {point.split(' ')[0]}
-                    </h3>
-                    <h3 className="text-lg font-bold leading-tight">
-                      {point.split(' ').slice(1).join(' ')}
-                    </h3>
-                  </div>
-                  <div className="w-10 h-10 bg-white border border-gray-300 rounded-full flex items-center justify-center group-hover:bg-accent-red group-hover:border-white group-hover:scale-110 transition-all duration-200">
-                    <svg className="w-5 h-5 text-gray-600 group-hover:text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 17L17 7M17 7H7M17 7V17" />
-                    </svg>
-                  </div>
-                </div>
-              </motion.div>
+                  <motion.div
+                    className="modern-card rounded-2xl p-6 hover:bg-gradient-to-br hover:from-primary-500 hover:to-secondary-500 hover:shadow-2xl transition-all duration-500 cursor-pointer group"
+                    initial={{ y: 30, opacity: 0 }}
+                    whileInView={{ y: 0, opacity: 1 }}
+                    transition={{ duration: 0.6, delay: 0.8 + index * 0.1 }}
+                    viewport={{ once: true }}
+                    whileHover={{ scale: 1.05, y: -8 }}
+                  >
+                    <div className="flex items-center justify-between">
+                      <div className="text-neutral-900 group-hover:text-white transition-colors duration-300">
+                        <h3 className="text-lg font-bold leading-tight">
+                          {point.split(' ')[0]}
+                        </h3>
+                        <h3 className="text-lg font-bold leading-tight">
+                          {point.split(' ').slice(1).join(' ')}
+                        </h3>
+                      </div>
+                      <motion.div 
+                        className="w-12 h-12 bg-gradient-to-br from-primary-400 to-secondary-400 rounded-full flex items-center justify-center group-hover:scale-110 group-hover:rotate-12 transition-all duration-300"
+                        whileHover={{ rotate: 12 }}
+                      >
+                        <ArrowRightIcon className="w-6 h-6 text-white" />
+                      </motion.div>
+                    </div>
+                  </motion.div>
                 </Link>
               )
             })}

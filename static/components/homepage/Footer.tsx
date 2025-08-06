@@ -44,7 +44,36 @@ const Footer = () => {
   ]
 
   return (
-    <footer className="relative py-20 bg-dark-blue overflow-hidden">
+    <footer className="relative py-20 bg-gradient-to-br from-neutral-900 via-primary-900 to-secondary-900 overflow-hidden">
+      {/* Background decorative elements */}
+      <div className="absolute inset-0">
+        <motion.div
+          className="absolute top-1/4 left-1/4 w-96 h-96 bg-gradient-to-r from-primary-400 to-secondary-400 rounded-full opacity-10 blur-3xl"
+          animate={{ 
+            scale: [1, 1.3, 1],
+            rotate: [0, 180, 360]
+          }}
+          transition={{ 
+            duration: 30,
+            repeat: Infinity,
+            ease: "linear"
+          }}
+        />
+        
+        <motion.div
+          className="absolute bottom-1/4 right-1/4 w-64 h-64 bg-gradient-to-r from-accent-400 to-primary-400 rounded-full opacity-8 blur-3xl"
+          animate={{ 
+            scale: [1, 0.7, 1],
+            rotate: [360, 180, 0]
+          }}
+          transition={{ 
+            duration: 25,
+            repeat: Infinity,
+            ease: "linear"
+          }}
+        />
+      </div>
+
       {/* Content */}
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Four Column Footer */}
@@ -60,7 +89,7 @@ const Footer = () => {
             >
               {/* Section Title */}
               <motion.h3
-                className="text-xl font-bold text-white mb-4"
+                className="text-xl font-bold gradient-text mb-4"
                 initial={{ y: 20, opacity: 0 }}
                 whileInView={{ y: 0, opacity: 1 }}
                 transition={{ duration: 0.6, delay: 0.2 + index * 0.1 }}
@@ -72,7 +101,7 @@ const Footer = () => {
               {/* Links or Contact Info */}
               {section.links ? (
                 <motion.ul
-                  className="space-y-2"
+                  className="space-y-3"
                   initial={{ y: 20, opacity: 0 }}
                   whileInView={{ y: 0, opacity: 1 }}
                   transition={{ duration: 0.6, delay: 0.4 + index * 0.1 }}
@@ -88,7 +117,7 @@ const Footer = () => {
                     >
                       <Link
                         href={link.href}
-                        className="text-gray-300 hover:text-white transition-colors duration-300 text-sm"
+                        className="text-white/70 hover:text-primary-300 transition-all duration-300 text-sm hover:translate-x-1 inline-block"
                       >
                         {link.name}
                       </Link>
@@ -97,7 +126,7 @@ const Footer = () => {
                 </motion.ul>
               ) : (
                 <motion.div
-                  className="space-y-3"
+                  className="space-y-4"
                   initial={{ y: 20, opacity: 0 }}
                   whileInView={{ y: 0, opacity: 1 }}
                   transition={{ duration: 0.6, delay: 0.4 + index * 0.1 }}
@@ -105,38 +134,61 @@ const Footer = () => {
                 >
                   {/* Email */}
                   <motion.div
-                    className="flex items-center gap-3"
+                    className="flex items-center space-x-3 group"
                     initial={{ y: 10, opacity: 0 }}
                     whileInView={{ y: 0, opacity: 1 }}
                     transition={{ duration: 0.4, delay: 0.6 + index * 0.1 }}
                     viewport={{ once: true }}
                   >
-                    <EnvelopeIcon className="w-5 h-5 text-white" />
+                    <div className="w-10 h-10 bg-gradient-to-br from-primary-400 to-secondary-400 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                      <EnvelopeIcon className="w-5 h-5 text-white" />
+                    </div>
                     <a
                       href={`mailto:${section.contact.email}`}
-                      className="text-gray-300 hover:text-white transition-colors duration-300 text-sm"
+                      className="text-white/70 hover:text-primary-300 transition-colors duration-300 text-sm"
                     >
                       {section.contact.email}
                     </a>
                   </motion.div>
 
-                  {/* Phone Numbers */}
+                  {/* Phone */}
                   <motion.div
-                    className="flex items-center gap-3"
+                    className="flex items-center space-x-3 group"
                     initial={{ y: 10, opacity: 0 }}
                     whileInView={{ y: 0, opacity: 1 }}
                     transition={{ duration: 0.4, delay: 0.7 + index * 0.1 }}
                     viewport={{ once: true }}
                   >
-                    <PhoneIcon className="w-5 h-5 text-white" />
-                    <div className="space-y-1">
-                      <a
-                        href={`tel:${section.contact.phone.india}`}
-                        className="block text-gray-300 hover:text-white transition-colors duration-300 text-sm"
-                      >
-                        {section.contact.phone.india}
-                      </a>
+                    <div className="w-10 h-10 bg-gradient-to-br from-accent-400 to-primary-400 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                      <PhoneIcon className="w-5 h-5 text-white" />
                     </div>
+                    <a
+                      href={`tel:${section.contact.phone.india}`}
+                      className="text-white/70 hover:text-primary-300 transition-colors duration-300 text-sm"
+                    >
+                      {section.contact.phone.india}
+                    </a>
+                  </motion.div>
+
+                  {/* Website */}
+                  <motion.div
+                    className="flex items-center space-x-3 group"
+                    initial={{ y: 10, opacity: 0 }}
+                    whileInView={{ y: 0, opacity: 1 }}
+                    transition={{ duration: 0.4, delay: 0.8 + index * 0.1 }}
+                    viewport={{ once: true }}
+                  >
+                    <div className="w-10 h-10 bg-gradient-to-br from-secondary-400 to-accent-400 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                      <GlobeAltIcon className="w-5 h-5 text-white" />
+                    </div>
+                    <a
+                      href="https://textashealthcare.in"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-white/70 hover:text-primary-300 transition-colors duration-300 text-sm"
+                    >
+                      textashealthcare.in
+                    </a>
                   </motion.div>
                 </motion.div>
               )}
@@ -144,181 +196,27 @@ const Footer = () => {
           ))}
         </div>
 
-        {/* Contact Section */}
-        <div className="text-center border-t border-gray-700 pt-12">
-          {/* Company Branding */}
-          <motion.div
-            className="mb-8"
-            initial={{ y: 30, opacity: 0 }}
-            whileInView={{ y: 0, opacity: 1 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-          >
-            <motion.h2
-              className="text-3xl md:text-4xl font-bold mb-4 text-white"
-              initial={{ y: 20, opacity: 0 }}
-              whileInView={{ y: 0, opacity: 1 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
-              viewport={{ once: true }}
-            >
-              <span className="text-pink-400">Textas</span>{' '}
-              <span className="text-purple-400">Healthcare</span>
-            </motion.h2>
-          </motion.div>
-
-          {/* Call to Action */}
-          <motion.div
-            className="mb-12"
-            initial={{ y: 30, opacity: 0 }}
-            whileInView={{ y: 0, opacity: 1 }}
-            transition={{ duration: 0.8, delay: 0.4 }}
-            viewport={{ once: true }}
-          >
-            <motion.h1
-              className="text-4xl md:text-6xl font-bold leading-tight text-white"
-              initial={{ y: 20, opacity: 0 }}
-              whileInView={{ y: 0, opacity: 1 }}
-              transition={{ duration: 0.8, delay: 0.6 }}
-              viewport={{ once: true }}
-            >
-              <span className="text-pink-400">Get In</span>
-              <br />
-              <span className="text-purple-400">Touch</span>
-            </motion.h1>
-          </motion.div>
-
-          {/* Contact Information */}
-          <motion.div
-            className="space-y-6"
-            initial={{ y: 30, opacity: 0 }}
-            whileInView={{ y: 0, opacity: 1 }}
-            transition={{ duration: 0.8, delay: 0.8 }}
-            viewport={{ once: true }}
-          >
-            {/* Phone Contact */}
-            <motion.div
-              className="flex items-center justify-center gap-4"
-              initial={{ y: 20, opacity: 0 }}
-              whileInView={{ y: 0, opacity: 1 }}
-              transition={{ duration: 0.6, delay: 1.0 }}
-              viewport={{ once: true }}
-            >
-              <div className="w-12 h-12 rounded-full border-2 border-pink-400 flex items-center justify-center">
-                <PhoneIcon className="w-6 h-6 text-pink-400" />
-              </div>
-              <div className="text-left">
-                <p className="text-gray-300">
-                  Call Us{' '}
-                  <a
-                    href="tel:+916281802796"
-                    className="font-bold text-white hover:text-pink-400 transition-colors duration-300"
-                  >
-                    +91 6281802796
-                  </a>
-                  {' '}
-                  <a
-                    href="tel:+919701674974"
-                    className="font-bold text-white hover:text-pink-400 transition-colors duration-300"
-                  >
-                    +91 9701674974
-                  </a>
-                </p>
-              </div>
-            </motion.div>
-
-            {/* Website Contact */}
-            <motion.div
-              className="flex items-center justify-center gap-4"
-              initial={{ y: 20, opacity: 0 }}
-              whileInView={{ y: 0, opacity: 1 }}
-              transition={{ duration: 0.6, delay: 1.2 }}
-              viewport={{ once: true }}
-            >
-              <div className="w-12 h-12 rounded-full border-2 border-pink-400 flex items-center justify-center">
-                <GlobeAltIcon className="w-6 h-6 text-pink-400" />
-              </div>
-              <div className="text-left">
-                <p className="text-gray-300">
-                  For More Information at{' '}
-                  <a
-                    href="https://www.textashealthcare.in"
-                    className="font-bold text-white hover:text-pink-400 transition-colors duration-300"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    www.textashealthcare.in
-                  </a>
-                </p>
-              </div>
-            </motion.div>
-          </motion.div>
-        </div>
-
-        {/* Copyright Bar */}
-        <div className="border-t border-gray-700 pt-6 mt-12">
+        {/* Bottom Section */}
+        <motion.div
+          className="border-t border-white/10 pt-8"
+          initial={{ y: 30, opacity: 0 }}
+          whileInView={{ y: 0, opacity: 1 }}
+          transition={{ duration: 0.8, delay: 0.4 }}
+          viewport={{ once: true }}
+        >
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
-            {/* Left - Policy Links */}
+            {/* Copyright */}
             <motion.div
-              className="flex space-x-6"
-              initial={{ y: 20, opacity: 0 }}
-              whileInView={{ y: 0, opacity: 1 }}
-              transition={{ duration: 0.6 }}
+              className="text-white/60 text-sm"
+              initial={{ x: -20, opacity: 0 }}
+              whileInView={{ x: 0, opacity: 1 }}
+              transition={{ duration: 0.6, delay: 0.6 }}
               viewport={{ once: true }}
             >
-              <Link
-                href="/privacy-policy"
-                className="text-gray-300 hover:text-white transition-colors duration-300 text-sm"
-              >
-                Privacy Policy
-              </Link>
-              <Link
-                href="/csr-statement"
-                className="text-gray-300 hover:text-white transition-colors duration-300 text-sm"
-              >
-                CSR Statement
-              </Link>
+              © 2024 TEXTAS Healthcare. All rights reserved.
             </motion.div>
-
-            {/* Center - Copyright */}
-            <motion.div
-              className="text-center"
-              initial={{ y: 20, opacity: 0 }}
-              whileInView={{ y: 0, opacity: 1 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-              viewport={{ once: true }}
-            >
-              <p className="text-gray-300 text-sm">
-                Copyright © 2025 Textas Healthcare. Enabled by{' '}
-                <a
-                  href=""
-                  className="underline hover:text-white transition-colors duration-300"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Tier2 Digital
-                </a>
-              </p>
-            </motion.div>
-
-            {/* Right - Social Media */}
-            {/* <motion.div
-              className="flex justify-center md:justify-end"
-              initial={{ y: 20, opacity: 0 }}
-              whileInView={{ y: 0, opacity: 1 }}
-              transition={{ duration: 0.6, delay: 0.4 }}
-              viewport={{ once: true }}
-            >
-              <a
-                href="https://linkedin.com/company/textas-healthcare"
-                className="w-8 h-8 bg-red-600 flex items-center justify-center rounded hover:bg-red-700 transition-colors duration-300"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <span className="text-white font-bold text-xs">in</span>
-              </a>
-            </motion.div> */}
           </div>
-        </div>
+        </motion.div>
       </div>
     </footer>
   )

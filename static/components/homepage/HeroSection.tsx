@@ -20,30 +20,67 @@ const HeroSection = () => {
   }, [textIndex, fullText])
 
   return (
-    <section className="relative min-h-screen bg-dark-blue overflow-hidden">
-      {/* Background Pattern */}
+    <section className="relative min-h-screen bg-gradient-to-br from-primary-900 via-secondary-800 to-accent-700 overflow-hidden">
+      {/* Animated Background Elements */}
       <div className="absolute inset-0">
+        {/* Floating orbs */}
         <motion.div
-          className="absolute top-1/2 right-0 w-96 h-96 bg-accent-red rounded-full opacity-20"
-          initial={{ scale: 0, rotate: -45 }}
-          animate={{ scale: 1, rotate: 0 }}
-          transition={{ duration: 1.5, ease: "easeOut" }}
-          style={{
-            transform: 'translate(50%, -50%)',
-            clipPath: 'polygon(0 0, 100% 0, 100% 100%, 0 70%)'
+          className="absolute top-1/4 left-1/4 w-32 h-32 bg-gradient-to-r from-primary-400 to-secondary-400 rounded-full opacity-20 blur-xl"
+          animate={{ 
+            y: [0, -20, 0],
+            x: [0, 10, 0],
+            scale: [1, 1.1, 1]
+          }}
+          transition={{ 
+            duration: 6,
+            repeat: Infinity,
+            ease: "easeInOut"
           }}
         />
         
         <motion.div
-          className="absolute bottom-0 right-0 w-full h-64 opacity-10"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 0.1 }}
-          transition={{ duration: 2, delay: 1 }}
-        >
+          className="absolute top-3/4 right-1/4 w-24 h-24 bg-gradient-to-r from-accent-400 to-primary-400 rounded-full opacity-30 blur-lg"
+          animate={{ 
+            y: [0, 15, 0],
+            x: [0, -15, 0],
+            scale: [1, 0.9, 1]
+          }}
+          transition={{ 
+            duration: 8,
+            repeat: Infinity,
+            ease: "easeInOut",
+            delay: 2
+          }}
+        />
+        
+        <motion.div
+          className="absolute bottom-1/4 left-1/3 w-20 h-20 bg-gradient-to-r from-secondary-400 to-accent-400 rounded-full opacity-25 blur-lg"
+          animate={{ 
+            y: [0, -10, 0],
+            x: [0, 20, 0],
+            scale: [1, 1.2, 1]
+          }}
+          transition={{ 
+            duration: 7,
+            repeat: Infinity,
+            ease: "easeInOut",
+            delay: 1
+          }}
+        />
+
+        {/* Gradient mesh overlay */}
+        <div className="absolute inset-0 bg-gradient-mesh opacity-10"></div>
+        
+        {/* Animated grid pattern */}
+        <div className="absolute inset-0 opacity-5">
           <div className="w-full h-full" style={{
-            backgroundImage: 'repeating-linear-gradient(45deg, transparent, transparent 10px, rgba(255,255,255,0.1) 10px, rgba(255,255,255,0.1) 20px)'
+            backgroundImage: `
+              linear-gradient(rgba(255,255,255,0.1) 1px, transparent 1px),
+              linear-gradient(90deg, rgba(255,255,255,0.1) 1px, transparent 1px)
+            `,
+            backgroundSize: '50px 50px'
           }} />
-        </motion.div>
+        </div>
       </div>
 
       {/* Content */}
@@ -57,17 +94,17 @@ const HeroSection = () => {
             animate={{ x: 0, opacity: 1 }}
             transition={{ duration: 1, delay: 0.5 }}
           >
-            {/* Tagline */}
+            {/* Tagline with gradient text */}
             <motion.div
               className="text-lg md:text-xl text-white/90 font-medium"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 0.8, delay: 1 }}
             >
-              <span className="inline-block">
+              <span className="inline-block gradient-text-animated">
                 {currentText}
                 <motion.span
-                  className="inline-block w-1 h-6 bg-white ml-1"
+                  className="inline-block w-1 h-6 bg-gradient-to-b from-primary-400 to-secondary-400 ml-1 rounded-full"
                   animate={{ opacity: [1, 0, 1] }}
                   transition={{ duration: 1, repeat: Infinity }}
                 />
@@ -82,19 +119,29 @@ const HeroSection = () => {
               transition={{ duration: 1, delay: 1.5 }}
             >
               Choose the{' '}
-              <span className="block">power of more</span>
+              <span className="block gradient-text">power of more</span>
             </motion.h1>
+
+            {/* Description */}
+            <motion.p
+              className="text-xl md:text-2xl text-white/80 leading-relaxed max-w-2xl"
+              initial={{ y: 30, opacity: 0 }}
+              animate={{ y: 0, opacity: 1 }}
+              transition={{ duration: 0.8, delay: 2 }}
+            >
+              Transform your healthcare business with cutting-edge solutions that drive growth, ensure precision, and build lasting credibility in the industry.
+            </motion.p>
 
             {/* CTA Button */}
             <motion.div
               initial={{ y: 30, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
-              transition={{ duration: 0.8, delay: 2 }}
+              transition={{ duration: 0.8, delay: 2.5 }}
             >
               <Link href="/contact">
                 <motion.button
-                  className="px-8 py-4 border-2 border-white text-white font-medium rounded-lg hover:bg-white hover:text-dark-blue transition-all duration-300"
-                  whileHover={{ scale: 1.05, boxShadow: "0 10px 30px rgba(255,255,255,0.2)" }}
+                  className="btn-modern text-lg px-10 py-4 font-semibold"
+                  whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                 >
                   Know More
@@ -103,36 +150,79 @@ const HeroSection = () => {
             </motion.div>
           </motion.div>
 
-          {/* Right Side - Graphical Elements */}
+          {/* Right Content - Animated Visual */}
           <motion.div
-            className="relative h-96 lg:h-full"
+            className="relative"
             initial={{ x: 100, opacity: 0 }}
             animate={{ x: 0, opacity: 1 }}
-            transition={{ duration: 1, delay: 0.8 }}
+            transition={{ duration: 1, delay: 1 }}
           >
-            {/* Large Red Shape */}
-            <motion.div
-              className="absolute top-0 right-0 w-80 h-80 bg-accent-red rounded-full"
-              initial={{ scale: 0, rotate: 45 }}
-              animate={{ scale: 1, rotate: 0 }}
-              transition={{ duration: 1.5, delay: 1.2, ease: "easeOut" }}
-              style={{
-                clipPath: 'polygon(0 0, 100% 0, 100% 100%, 0 70%)',
-                transform: 'translate(30%, -30%)'
-              }}
-            />
-            
-            {/* Diagonal Lines Pattern */}
-            <motion.div
-              className="absolute bottom-0 right-0 w-full h-64 opacity-20"
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 0.2 }}
-              transition={{ duration: 2, delay: 2 }}
-            >
-              <div className="w-full h-full" style={{
-                backgroundImage: 'repeating-linear-gradient(45deg, transparent, transparent 5px, rgba(255,255,255,0.3) 5px, rgba(255,255,255,0.3) 10px)'
-              }} />
-            </motion.div>
+            {/* Main visual card */}
+            <div className="relative">
+              <motion.div
+                className="modern-card rounded-3xl p-8 md:p-12"
+                animate={{ 
+                  y: [0, -10, 0],
+                  rotateY: [0, 5, 0]
+                }}
+                transition={{ 
+                  duration: 8,
+                  repeat: Infinity,
+                  ease: "easeInOut"
+                }}
+              >
+                {/* Healthcare icon or illustration */}
+                <div className="text-center">
+                  <motion.div
+                    className="w-32 h-32 mx-auto mb-6 bg-gradient-to-br from-primary-400 to-secondary-500 rounded-full flex items-center justify-center"
+                    animate={{ 
+                      scale: [1, 1.1, 1],
+                      rotate: [0, 5, 0]
+                    }}
+                    transition={{ 
+                      duration: 4,
+                      repeat: Infinity,
+                      ease: "easeInOut"
+                    }}
+                  >
+                    <svg className="w-16 h-16 text-white" fill="currentColor" viewBox="0 0 24 24">
+                      <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                    </svg>
+                  </motion.div>
+                  
+                  <h3 className="text-2xl font-bold text-white mb-4">Healthcare Excellence</h3>
+                  <p className="text-white/80 text-lg">Innovative solutions for modern healthcare challenges</p>
+                </div>
+              </motion.div>
+              
+              {/* Floating elements around the card */}
+              <motion.div
+                className="absolute -top-4 -right-4 w-8 h-8 bg-gradient-to-r from-accent-400 to-primary-400 rounded-full"
+                animate={{ 
+                  y: [0, -20, 0],
+                  scale: [1, 1.2, 1]
+                }}
+                transition={{ 
+                  duration: 3,
+                  repeat: Infinity,
+                  ease: "easeInOut"
+                }}
+              />
+              
+              <motion.div
+                className="absolute -bottom-4 -left-4 w-6 h-6 bg-gradient-to-r from-secondary-400 to-accent-400 rounded-full"
+                animate={{ 
+                  y: [0, 15, 0],
+                  scale: [1, 0.8, 1]
+                }}
+                transition={{ 
+                  duration: 4,
+                  repeat: Infinity,
+                  ease: "easeInOut",
+                  delay: 1
+                }}
+              />
+            </div>
           </motion.div>
         </div>
       </div>

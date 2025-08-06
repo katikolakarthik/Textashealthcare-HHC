@@ -25,7 +25,7 @@ const Header = () => {
 
   return (
     <motion.header 
-      className="relative z-50 bg-dark-blue/90 backdrop-blur-sm"
+      className="relative z-50 glass-dark border-b border-white/10"
       initial={{ y: -100, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.8, ease: "easeOut" }}
@@ -35,15 +35,17 @@ const Header = () => {
           {/* Logo */}
           <Link href="/">
             <motion.div 
-              className="flex flex-col cursor-pointer"
+              className="flex items-center cursor-pointer"
               initial={{ x: -50, opacity: 0 }}
               animate={{ x: 0, opacity: 1 }}
               transition={{ duration: 0.8, delay: 0.2 }}
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
-              <h1 className="text-2xl font-bold text-white tracking-wider">Textas</h1>
-              <p className="text-xs text-white/80 tracking-wide">Healthcare</p>
+              <h1 className="text-2xl font-bold tracking-wider">
+                <span className="text-[#e91e63]">Textas</span>
+                <span className="text-[#3f51b5]"> Healthcare</span>
+              </h1>
             </motion.div>
           </Link>
 
@@ -63,7 +65,7 @@ const Header = () => {
                     className="relative"
                   >
                     <motion.button
-                      className="text-white hover:text-white/80 transition-colors duration-200 flex items-center space-x-1"
+                      className="text-white hover:text-primary-300 transition-colors duration-200 flex items-center space-x-1 px-4 py-2 rounded-lg hover:bg-white/10"
                       whileHover={{ scale: 1.05 }}
                       whileTap={{ scale: 0.95 }}
                       initial={{ y: -20, opacity: 0 }}
@@ -78,11 +80,11 @@ const Header = () => {
                     <AnimatePresence>
                       {isServicesOpen && (
                         <motion.div
-                          initial={{ opacity: 0, y: -10 }}
-                          animate={{ opacity: 1, y: 0 }}
-                          exit={{ opacity: 0, y: -10 }}
+                          initial={{ opacity: 0, y: -10, scale: 0.95 }}
+                          animate={{ opacity: 1, y: 0, scale: 1 }}
+                          exit={{ opacity: 0, y: -10, scale: 0.95 }}
                           transition={{ duration: 0.2 }}
-                          className="absolute top-full left-0 mt-2 w-64 bg-dark-blue border border-gray-700 rounded-lg shadow-lg py-2 z-50"
+                          className="absolute top-full left-0 mt-2 w-64 glass border border-white/20 rounded-xl shadow-2xl py-2 z-50 overflow-hidden"
                         >
                           {services.map((service, serviceIndex) => (
                             <motion.div
@@ -90,11 +92,11 @@ const Header = () => {
                               initial={{ opacity: 0, x: -10 }}
                               animate={{ opacity: 1, x: 0 }}
                               transition={{ duration: 0.2, delay: serviceIndex * 0.05 }}
-                              whileHover={{ x: 5 }}
+                              whileHover={{ x: 5, backgroundColor: 'rgba(255, 255, 255, 0.1)' }}
                             >
                               <Link
                                 href={service.href}
-                                className="block px-4 py-3 text-white hover:bg-gray-700 transition-colors duration-200 text-sm"
+                                className="block px-4 py-3 text-white hover:text-primary-300 transition-all duration-200 text-sm"
                                 onClick={() => setIsServicesOpen(false)}
                               >
                                 {service.name}
@@ -106,31 +108,31 @@ const Header = () => {
                     </AnimatePresence>
                   </motion.div>
                 ) : (
-                  <Link
-                    href={item.name === "Data Security" ? "/security" : item.name === "Resources" ? "/resources" : item.name === "About" ? "/about" : item.name === "Contact us" ? "/contact" : "#"}
-                    className="text-white hover:text-white/80 transition-colors duration-200 flex items-center space-x-1"
-                  >
-                    <motion.span
-                      className="text-sm font-medium"
+                  <Link href={item.name === 'Data Security' ? '/security' : 
+                              item.name === 'Resources' ? '/resources' : 
+                              item.name === 'About' ? '/about' : 
+                              item.name === 'Contact us' ? '/contact' : '#'}>
+                    <motion.button
+                      className="text-white hover:text-primary-300 transition-colors duration-200 px-4 py-2 rounded-lg hover:bg-white/10"
                       whileHover={{ scale: 1.05 }}
                       whileTap={{ scale: 0.95 }}
                       initial={{ y: -20, opacity: 0 }}
                       animate={{ y: 0, opacity: 1 }}
                       transition={{ duration: 0.5, delay: 0.6 + index * 0.1 }}
                     >
-                      {item.name}
-                    </motion.span>
+                      <span className="text-sm font-medium">{item.name}</span>
+                    </motion.button>
                   </Link>
                 )}
               </div>
             ))}
           </motion.nav>
 
-          {/* Mobile menu button */}
+          {/* Mobile Menu Button */}
           <motion.button
-            className="md:hidden text-white"
-            whileHover={{ scale: 1.1 }}
-            whileTap={{ scale: 0.9 }}
+            className="md:hidden text-white p-2 rounded-lg hover:bg-white/10 transition-colors duration-200"
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.5, delay: 0.8 }}
