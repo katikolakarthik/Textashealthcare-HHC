@@ -6,7 +6,7 @@ import Image from 'next/image'
 
 const ScrollAnimationSection2 = () => {
   const ref = useRef(null)
-  const isInView = useInView(ref, { once: false, threshold: 0.3 })
+  const isInView = useInView(ref, { once: false })
 
   return (
     <section 

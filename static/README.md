@@ -75,6 +75,18 @@ npm run build
 npm start
 ```
 
+## Deployment
+
+This project is optimized for Vercel deployment. See [DEPLOYMENT.md](./DEPLOYMENT.md) for detailed deployment instructions.
+
+### Quick Deploy to Vercel
+
+1. Push your code to a Git repository (GitHub, GitLab, or Bitbucket)
+2. Go to [vercel.com](https://vercel.com) and sign up/login
+3. Click "New Project" and import your repository
+4. Vercel will automatically detect it's a Next.js project
+5. Click "Deploy" - your site will be live in minutes!
+
 ## License
 
 MIT License - feel free to use this component in your projects! 
