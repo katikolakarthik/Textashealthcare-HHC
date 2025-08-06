@@ -6,7 +6,7 @@ import Image from 'next/image'
 import Header from '../homepage/Header'
 import Footer from '../homepage/Footer'
 import ThreeColumnSection from '../homepage/ThreeColumnSection'
-import ComplianceSection from '../homepage/ComplianceSection'
+// import ComplianceSection from '../homepage/ComplianceSection'
 import DataSecurityPractices from './DataSecurityPractices'
 
 const SecurityPage = () => {
@@ -102,20 +102,7 @@ const SecurityPage = () => {
               safe handling of your patient health data.
             </motion.p>
 
-            {/* CTA Button */}
-            <motion.div
-              initial={{ y: 30, opacity: 0 }}
-              animate={{ y: 0, opacity: 1 }}
-              transition={{ duration: 0.8, delay: 0.6 }}
-            >
-              <motion.button
-                className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg text-lg font-semibold transition-colors duration-300"
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-              >
-                Learn More About Our Security
-              </motion.button>
-            </motion.div>
+
           </motion.div>
         </div>
                            </section>
@@ -124,7 +111,7 @@ const SecurityPage = () => {
           
 
           {/* Compliance Section */}
-          <ComplianceSection />
+          {/* <ComplianceSection /> */}
        {/* Data Security Practices Section */}
           <DataSecurityPractices />
 

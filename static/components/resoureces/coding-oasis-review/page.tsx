@@ -221,7 +221,7 @@ export default function CodingOasisReview() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
             >
-              <div className="text-4xl lg:text-6xl font-bold mb-4 bg-gradient-to-r from-white to-gray-200 bg-clip-text text-transparent">1.5 Million</div>
+              <div className="text-4xl lg:text-6xl font-bold mb-4 bg-gradient-to-r from-white to-gray-200 bg-clip-text text-transparent">10000+</div>
               <div className="text-lg lg:text-xl font-medium text-white/90">
                 <div>Charts</div>
                 <div>Coded</div>

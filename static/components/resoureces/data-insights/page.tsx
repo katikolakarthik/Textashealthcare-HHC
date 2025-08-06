@@ -3,6 +3,7 @@
 import { motion } from 'framer-motion';
 import Image from 'next/image';
 import { useState, useEffect } from 'react';
+import Link from 'next/link';
 import Header from '@/homepage/Header';
 import Footer from '@/homepage/Footer';
 import ThreeColumnSection from '@/homepage/ThreeColumnSection';
@@ -127,13 +128,15 @@ export default function DataInsights() {
                 </p>
                 
                 {/* Call-to-Action Button */}
-                <motion.button 
-                  className="inline-flex items-center justify-center px-8 py-4 bg-blue-600 text-white font-semibold rounded-full shadow-lg hover:bg-blue-700 transition-colors duration-300 w-fit"
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                >
-                  Let's Connect
-                </motion.button>
+                <Link href="/contact">
+                  <motion.button 
+                    className="inline-flex items-center justify-center px-8 py-4 bg-blue-600 text-white font-semibold rounded-full shadow-lg hover:bg-blue-700 transition-colors duration-300 w-fit"
+                    whileHover={{ scale: 1.05 }}
+                    whileTap={{ scale: 0.95 }}
+                  >
+                    Let's Connect
+                  </motion.button>
+                </Link>
               </div>
               
               {/* Right side - Circular image centered */}

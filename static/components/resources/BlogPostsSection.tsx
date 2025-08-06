@@ -3,6 +3,7 @@
 import { motion } from 'framer-motion'
 import Image from 'next/image'
 import { useState } from 'react'
+import Link from 'next/link'
 
 const blogPosts = [
   {
@@ -111,22 +112,7 @@ const BlogPostsSection = () => {
           ))}
         </div>
 
-        {/* Read More Button */}
-        <motion.div
-          className="text-center"
-          initial={{ y: 50, opacity: 0 }}
-          whileInView={{ y: 0, opacity: 1 }}
-          transition={{ duration: 0.8, delay: 0.4 }}
-          viewport={{ once: true }}
-        >
-          <motion.button
-            className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg text-lg font-semibold transition-colors duration-300"
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-          >
-            Read More
-          </motion.button>
-        </motion.div>
+
       </div>
     </section>
   )

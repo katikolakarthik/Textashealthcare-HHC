@@ -3,6 +3,7 @@
 import { motion } from 'framer-motion';
 import Image from 'next/image';
 import { useState, useEffect } from 'react';
+import Link from 'next/link';
 import Header from '@/homepage/Header';
 import Footer from '@/homepage/Footer';
 import ThreeColumnSection from '@/homepage/ThreeColumnSection';
@@ -131,13 +132,15 @@ export default function RevenueCycleManagement() {
                 </p>
                 
                 {/* Call-to-Action Button */}
-                <motion.button 
-                  className="inline-flex items-center justify-center px-8 py-4 bg-blue-600 text-white font-semibold rounded-full shadow-lg hover:bg-blue-700 transition-colors duration-300 w-fit"
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                >
-                  Let's Connect
-                </motion.button>
+                <Link href="/contact">
+                  <motion.button 
+                    className="inline-flex items-center justify-center px-8 py-4 bg-blue-600 text-white font-semibold rounded-full shadow-lg hover:bg-blue-700 transition-colors duration-300 w-fit"
+                    whileHover={{ scale: 1.05 }}
+                    whileTap={{ scale: 0.95 }}
+                  >
+                    Let's Connect
+                  </motion.button>
+                </Link>
               </div>
               
               {/* Right side - Circular image centered */}
@@ -305,72 +308,7 @@ export default function RevenueCycleManagement() {
         </div>
       </motion.div>
 
-      {/* Cost Saving Calculator Section */}
-      <motion.div 
-        className="relative z-10 w-full bg-gradient-to-r from-red-900/80 via-purple-900/90 to-indigo-900/80 py-16 md:py-20 lg:py-24 overflow-hidden"
-        initial={{ opacity: 0, y: 50 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8 }}
-        viewport={{ once: true }}
-      >
-        {/* Background Image Overlay */}
-        <div className="absolute inset-0 opacity-20">
-          <div className="absolute inset-0 bg-gradient-to-r from-red-900/40 via-purple-900/40 to-indigo-900/40"></div>
-          <div className="absolute right-0 bottom-0 w-96 h-96 transform translate-x-20 translate-y-20">
-            <svg className="w-full h-full text-white/10" viewBox="0 0 200 200" fill="currentColor">
-              {/* Calculator shape */}
-              <rect x="20" y="40" width="160" height="120" rx="8" fill="currentColor"/>
-              {/* Calculator screen */}
-              <rect x="30" y="50" width="140" height="20" rx="2" fill="white"/>
-              {/* Calculator buttons */}
-              <rect x="30" y="80" width="25" height="15" rx="2" fill="white"/>
-              <rect x="65" y="80" width="25" height="15" rx="2" fill="white"/>
-              <rect x="100" y="80" width="25" height="15" rx="2" fill="white"/>
-              <rect x="135" y="80" width="25" height="15" rx="2" fill="white"/>
-              <rect x="30" y="105" width="25" height="15" rx="2" fill="white"/>
-              <rect x="65" y="105" width="25" height="15" rx="2" fill="white"/>
-              <rect x="100" y="105" width="25" height="15" rx="2" fill="white"/>
-              <rect x="135" y="105" width="25" height="15" rx="2" fill="white"/>
-              <rect x="30" y="130" width="25" height="15" rx="2" fill="white"/>
-              <rect x="65" y="130" width="25" height="15" rx="2" fill="white"/>
-              <rect x="100" y="130" width="25" height="15" rx="2" fill="white"/>
-              <rect x="135" y="130" width="25" height="15" rx="2" fill="white"/>
-            </svg>
-          </div>
-        </div>
 
-        {/* Content */}
-        <div className="relative z-10 max-w-4xl mx-auto px-4 md:px-6 lg:px-8 text-center">
-          <motion.h2 
-            className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4 md:mb-6"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-          >
-            Cost Saving Calculator
-          </motion.h2>
-          
-          <motion.p 
-            className="text-lg md:text-xl text-white/90 mb-8 md:mb-10 max-w-2xl mx-auto leading-relaxed"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-          >
-            Know how much you save with Red Road as your trusted partner
-          </motion.p>
-          
-          <motion.button 
-            className="inline-flex items-center justify-center px-8 py-4 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-lg shadow-lg transition-all duration-300 transform hover:scale-105"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.4 }}
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-          >
-            View Calculator
-          </motion.button>
-        </div>
-      </motion.div>
 
       {/* How can we help you? Section */}
       <motion.div 

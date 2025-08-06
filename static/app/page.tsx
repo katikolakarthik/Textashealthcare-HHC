@@ -15,7 +15,7 @@ import ExperienceCarouselSection from '../components/homepage/ExperienceCarousel
 import TestimonialsSection from '../components/homepage/TestimonialsSection'
 // import TeamSection from '../components/homepage/TeamSection'
 import PowerOfMoreSection from '../components/homepage/PowerOfMoreSection'
-import ComplianceSection from '../components/homepage/ComplianceSection'
+// import ComplianceSection from '../components/homepage/ComplianceSection'
 import ThreeColumnSection from '../components/homepage/ThreeColumnSection'
 import Footer from '../components/homepage/Footer'
 
@@ -39,7 +39,7 @@ export default function Home() {
         <TestimonialsSection />
         {/* <TeamSection /> */}
         <PowerOfMoreSection />
-        <ComplianceSection />
+        {/* <ComplianceSection /> */}
         <ThreeColumnSection />
         <Footer />
       </main>

@@ -7,8 +7,7 @@ import Footer from '../homepage/Footer'
 import ThreeColumnSection from '../homepage/ThreeColumnSection'
 import ComplianceSection from '../homepage/ComplianceSection'
 import MailingListSignup from './MailingListSignup'
-import MeetingScheduler from './MeetingScheduler'
-
+// import MeetingScheduler from './MeetingScheduler'
 const ContactPage = () => {
   return (
     <div className="min-h-screen bg-dark-blue relative overflow-hidden">
@@ -130,27 +129,7 @@ const ContactPage = () => {
                 />
               </div>
 
-              {/* Opt-in Checkbox */}
-              <div className="flex items-start space-x-3">
-                <input
-                  type="checkbox"
-                  id="optin"
-                  name="optin"
-                  className="mt-1 h-4 w-4 text-accent-red focus:ring-accent-red border-gray-600 rounded bg-gray-800"
-                />
-                <label htmlFor="optin" className="text-sm text-white/80 leading-relaxed">
-                  By opting in for text messages, you agree to receive messages from RED ROAD HEALTH SOLUTIONS PRIVATE LIMITED, at the number provided. Message and data rates may apply. Reply STOP to cancel. Reply HELP for help. View our Privacy Policy for more information.
-                </label>
-              </div>
 
-              {/* reCAPTCHA Placeholder */}
-              <div className="flex items-center space-x-3">
-                <div className="w-6 h-6 border-2 border-gray-600 rounded bg-gray-800 flex items-center justify-center">
-                  <div className="w-3 h-3 bg-accent-red rounded-sm"></div>
-                </div>
-                <span className="text-sm text-white/80">I'm not a robot</span>
-                <div className="text-xs text-white/60">reCAPTCHA</div>
-              </div>
 
               {/* Submit Button */}
               <motion.button
@@ -167,7 +146,7 @@ const ContactPage = () => {
       </section>
 
       {/* Contact Information Section */}
-      <section className="py-20 bg-gray-900">
+      {/* <section className="py-20 bg-gray-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"
@@ -177,7 +156,7 @@ const ContactPage = () => {
             viewport={{ once: true }}
           >
             {/* Phone Numbers */}
-            <motion.div
+            {/* <motion.div
               className="text-center"
               initial={{ y: 30, opacity: 0 }}
               whileInView={{ y: 0, opacity: 1 }}
@@ -191,10 +170,10 @@ const ContactPage = () => {
                 <p className="text-white font-semibold">IND: +91 70220 03311</p>
                 <p className="text-white font-semibold">US: +1 201 778 9240</p>
               </div>
-            </motion.div>
+            </motion.div> */}
 
             {/* Headquarters */}
-            <motion.div
+            {/* <motion.div
               className="text-center"
               initial={{ y: 30, opacity: 0 }}
               whileInView={{ y: 0, opacity: 1 }}
@@ -211,10 +190,10 @@ const ContactPage = () => {
                 Rupena Agrahara, Bengaluru,<br />
                 Karnataka, 560068
               </p>
-            </motion.div>
+            </motion.div> */}
 
             {/* Email */}
-            <motion.div
+            {/* <motion.div
               className="text-center"
               initial={{ y: 30, opacity: 0 }}
               whileInView={{ y: 0, opacity: 1 }}
@@ -225,10 +204,10 @@ const ContactPage = () => {
                 <EnvelopeIcon className="w-8 h-8 text-white" />
               </div>
               <p className="text-white font-semibold">info@textashealthcare.in</p>
-            </motion.div>
+            </motion.div> */}
 
             {/* Registered Office */}
-            <motion.div
+            {/* <motion.div
               className="text-center"
               initial={{ y: 30, opacity: 0 }}
               whileInView={{ y: 0, opacity: 1 }}
@@ -243,15 +222,15 @@ const ContactPage = () => {
                 473, Embassy Pristine,<br />
                 Jblur, Bangalore - 560 103
               </p>
-            </motion.div>
-          </motion.div>
-        </div>
-      </section>
+            </motion.div> */}
+          {/* </motion.div> */}
+        {/* </div> */}
+      {/* </section> */}
       {/* Mailing List Signup */}
       <MailingListSignup /> 
       
       {/* Meeting Scheduler */}
-      <MeetingScheduler />
+      {/* <MeetingScheduler /> */}
       
       {/* Three Column Section */}
       <ThreeColumnSection />

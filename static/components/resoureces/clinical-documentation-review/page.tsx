@@ -3,6 +3,7 @@
 import { motion } from 'framer-motion';
 import Image from 'next/image';
 import { useState, useEffect } from 'react';
+import Link from 'next/link';
 import Header from '@/homepage/Header';
 import Footer from '@/homepage/Footer';
 import ThreeColumnSection from '@/homepage/ThreeColumnSection';
@@ -150,13 +151,15 @@ export default function ClinicalDocumentationReview() {
                 </p>
                 
                 {/* Call-to-Action Button */}
-                <motion.button 
-                  className="inline-flex items-center justify-center px-8 py-4 bg-blue-600 text-white font-semibold rounded-full shadow-lg hover:bg-blue-700 transition-colors duration-300 w-fit"
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                >
-                  Let's Connect
-                </motion.button>
+                <Link href="/contact">
+                  <motion.button 
+                    className="inline-flex items-center justify-center px-8 py-4 bg-blue-600 text-white font-semibold rounded-full shadow-lg hover:bg-blue-700 transition-colors duration-300 w-fit"
+                    whileHover={{ scale: 1.05 }}
+                    whileTap={{ scale: 0.95 }}
+                  >
+                    Let's Connect
+                  </motion.button>
+                </Link>
               </div>
               
               {/* Right side - Circular image centered */}
@@ -218,7 +221,7 @@ export default function ClinicalDocumentationReview() {
               transition={{ duration: 0.6, delay: 0.2 }}
             >
               <div className="text-4xl lg:text-8xl font-bold mb-4 text-white">
-                1.2 Million
+                8000+
               </div>
               <div className="text-lg lg:text-xl text-white font-medium">
                 Charts Reviewed

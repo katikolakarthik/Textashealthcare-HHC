@@ -96,22 +96,7 @@ const CalculatorsSection = () => {
               ))}
             </motion.div>
             
-            {/* CTA Button */}
-            <motion.div
-              className="text-center"
-              initial={{ y: 20, opacity: 0 }}
-              whileInView={{ y: 0, opacity: 1 }}
-              transition={{ duration: 0.6, delay: 1.2 }}
-              viewport={{ once: true }}
-            >
-              <motion.button
-                className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg text-lg font-semibold transition-colors duration-300"
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-              >
-                Try Our Calculator
-              </motion.button>
-            </motion.div>
+
           </div>
         </motion.div>
 

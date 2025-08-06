@@ -117,14 +117,13 @@ const WhoWeAreSection = () => {
               <div className="relative bg-gray-100 rounded-lg shadow-2xl overflow-hidden">
                 <div className="aspect-video">
                   <iframe
+                    src="https://player.cloudinary.com/embed/?cloud_name=dnomrmyzh&public_id=WhatsApp_Video_2025-08-05_at_22.06.50_d82aed84_nna9ds&profile=cld-default"
                     width="100%"
                     height="100%"
-                    src="https://www.youtube.com/embed/OrU7o9TejTk?si=I1lecCnPnke1D4pw"
-                    title="YouTube video player"
-                    frameBorder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                    referrerPolicy="strict-origin-when-cross-origin"
+                    style={{ height: 'auto', width: '100%', aspectRatio: '640 / 360' }}
+                    allow="autoplay; fullscreen; encrypted-media; picture-in-picture"
                     allowFullScreen
+                    frameBorder="0"
                     className="w-full h-full"
                   />
                 </div>
@@ -158,7 +157,7 @@ const WhoWeAreSection = () => {
                   </div>
                 </motion.div>
 
-                {/* Watch on YouTube Button */}
+                {/* Watch Video Button */}
                 <motion.button
                   className="absolute top-4 right-4 bg-black text-white px-4 py-2 rounded text-sm font-medium hover:bg-gray-800 transition-colors duration-200"
                   initial={{ opacity: 0, scale: 0.9 }}
@@ -167,7 +166,7 @@ const WhoWeAreSection = () => {
                   transition={{ duration: 0.5, delay: 1 }}
                   viewport={{ once: true }}
                 >
-                  Watch on YouTube
+                  Watch Video
                 </motion.button>
               </div>
             </div>

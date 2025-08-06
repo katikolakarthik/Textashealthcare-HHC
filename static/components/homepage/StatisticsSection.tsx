@@ -9,11 +9,11 @@ const StatisticsSection = () => {
       label: "Consistent Accuracy Rate"
     },
     {
-      number: "1.2 Million",
+      number: "8000+",
       label: "Charts Reviewed"
     },
     {
-      number: "1.5 Million",
+      number: "10000+",
       label: "Charts Coded"
     }
   ]

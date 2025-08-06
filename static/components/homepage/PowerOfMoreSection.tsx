@@ -1,6 +1,7 @@
 'use client'
 
 import { motion } from 'framer-motion'
+import Link from 'next/link'
 
 const PowerOfMoreSection = () => {
   return (
@@ -68,13 +69,15 @@ const PowerOfMoreSection = () => {
             transition={{ duration: 0.8, delay: 0.8 }}
             viewport={{ once: true }}
           >
-            <motion.button
-              className="bg-blue-600 text-white px-8 py-4 rounded-full text-lg font-semibold shadow-lg hover:bg-blue-700 transition-colors duration-300"
-              whileHover={{ scale: 1.05, shadow: "0 20px 25px -5px rgba(0, 0, 0, 0.3)" }}
-              whileTap={{ scale: 0.95 }}
-            >
-              Read More
-            </motion.button>
+            <Link href="/contact">
+              <motion.button
+                className="bg-blue-600 text-white px-8 py-4 rounded-full text-lg font-semibold shadow-lg hover:bg-blue-700 transition-colors duration-300"
+                whileHover={{ scale: 1.05, shadow: "0 20px 25px -5px rgba(0, 0, 0, 0.3)" }}
+                whileTap={{ scale: 0.95 }}
+              >
+                Read More
+              </motion.button>
+            </Link>
           </motion.div>
         </motion.div>
       </div>

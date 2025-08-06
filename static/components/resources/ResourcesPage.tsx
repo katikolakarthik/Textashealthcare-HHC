@@ -68,20 +68,7 @@ const ResourcesPage = () => {
                 the latest in the industry
               </motion.p>
 
-              {/* CTA Button */}
-              <motion.div
-                initial={{ y: 30, opacity: 0 }}
-                animate={{ y: 0, opacity: 1 }}
-                transition={{ duration: 0.8, delay: 0.6 }}
-              >
-                <motion.button
-                  className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg text-lg font-semibold transition-colors duration-300"
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                >
-                  Explore Resources
-                </motion.button>
-              </motion.div>
+
             </motion.div>
 
             {/* Right Side - Background Image Elements */}
