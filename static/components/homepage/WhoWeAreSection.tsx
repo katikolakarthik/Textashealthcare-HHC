@@ -114,17 +114,17 @@ const WhoWeAreSection = () => {
           >
             <div className="relative">
               {/* Video Frame */}
-              <div className="relative bg-gray-100 rounded-lg shadow-2xl overflow-hidden">
-                <div className="aspect-video">
+              <div className="relative rounded-lg shadow-2xl overflow-hidden bg-transparent">
+                <div className="aspect-video bg-transparent">
                   <iframe
                     src="https://player.cloudinary.com/embed/?cloud_name=dnomrmyzh&public_id=WhatsApp_Video_2025-08-05_at_22.06.50_d82aed84_nna9ds&profile=cld-default"
                     width="100%"
                     height="100%"
-                    style={{ height: 'auto', width: '100%', aspectRatio: '640 / 360' }}
+                    style={{ height: 'auto', width: '100%', aspectRatio: '640 / 360', backgroundColor: 'transparent' }}
                     allow="autoplay; fullscreen; encrypted-media; picture-in-picture"
                     allowFullScreen
                     frameBorder="0"
-                    className="w-full h-full"
+                    className="w-full h-full bg-transparent"
                   />
                 </div>
                 
