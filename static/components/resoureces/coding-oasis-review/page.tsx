@@ -651,7 +651,7 @@ export default function CodingOasisReview() {
               
               {/* Testimonial Text */}
               <blockquote className="text-base lg:text-lg text-gray-600 leading-relaxed font-normal font-sans">
-                "Over the last several years, we established a working relationship with Red Road on projects that included Face to Face (F2F) readiness, Pre-bill Chart Audits, New Clinician Documentation Review and Commercial Insurance, Managed Care, and Medicare ICD 10 coding. The initial results have been promising, so we have expanded our collaboration with Red Road. This has helped with improving the quality of the documentation significantly. Our regular meetings with the Red Road leadership team helps in open communication, sharing feedback and improving the project outcomes."
+                "Over the last several years, we established a working relationship with TEXTAS Healthcare on projects that included Face to Face (F2F) readiness, Pre-bill Chart Audits, New Clinician Documentation Review and Commercial Insurance, Managed Care, and Medicare ICD 10 coding. The initial results have been promising, so we have expanded our collaboration with TEXTAS Healthcare. This has helped with improving the quality of the documentation significantly. Our regular meetings with the TEXTAS Healthcare leadership team helps in open communication, sharing feedback and improving the project outcomes."
               </blockquote>
             </motion.div>
           </div>

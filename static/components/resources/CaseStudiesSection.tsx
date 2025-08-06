@@ -94,7 +94,7 @@ const CaseStudiesSection = () => {
               transition={{ duration: 0.6, delay: 0.6 }}
               viewport={{ once: true }}
             >
-              Review Choice Demonstration (RCD) Case Study | Red Road Client Overview This client is home health provider that was struggling with claim approval rates. Through our comprehensive review and optimization process, we helped them achieve a remarkable improvement from 85% to 98% approval rate, demonstrating the effectiveness of our healthcare business solutions.
+                Review Choice Demonstration (RCD) Case Study | TEXTAS Healthcare Client Overview This client is home health provider that was struggling with claim approval rates. Through our comprehensive review and optimization process, we helped them achieve a remarkable improvement from 85% to 98% approval rate, demonstrating the effectiveness of our healthcare business solutions.
             </motion.p>
           </div>
         </motion.div>

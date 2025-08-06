@@ -90,7 +90,7 @@ const MailingListSignup = () => {
                 transition={{ duration: 0.8, delay: 1.0 }}
                 viewport={{ once: true }}
               >
-                By subscribing, you agree to receive marketing emails from Red Road Healthcare. 
+                By subscribing, you agree to receive marketing emails from TEXTAS Healthcare. 
                 You can unsubscribe at any time. View our{' '}
                 <a href="/privacy-policy" className="text-accent-red hover:underline">
                   Privacy Policy

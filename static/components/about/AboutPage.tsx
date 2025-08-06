@@ -43,7 +43,7 @@ const AboutPage = () => {
                 animate={{ y: 0, opacity: 1 }}
                 transition={{ duration: 0.8, delay: 0.4 }}
               >
-                While leading one of India's first organized home health providers which went on to partner with one of the largest home health companies in the U.S., the founding team noticed an acute and unmet need in clinical support services for home-based care providers and, in 2018, Red Road was born.
+                While leading one of India's first organized home health providers which went on to partner with one of the largest home health companies in the U.S., the founding team noticed an acute and unmet need in clinical support services for home-based care providers and, in 2023, TEXTAS Healthcare was born.
               </motion.p>
 
               {/* Second Paragraph */}
@@ -53,7 +53,7 @@ const AboutPage = () => {
                 animate={{ y: 0, opacity: 1 }}
                 transition={{ duration: 0.8, delay: 0.6 }}
               >
-                The combined wealth of clinical expertise and home care operating experience empowers Red Road to specialize in crafting cost-effective, custom solutions for the complex challenges faced by home-based care providers.
+                The combined wealth of clinical expertise and home care operating experience empowers TEXTAS Healthcare to specialize in crafting cost-effective, custom solutions for the complex challenges faced by home-based care providers.
               </motion.p>
             </motion.div>
 

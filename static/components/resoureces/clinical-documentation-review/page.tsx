@@ -277,7 +277,7 @@ export default function ClinicalDocumentationReview() {
                 transition={{ duration: 0.6, delay: 0.4 }}
               >
                 <p className="text-base md:text-lg lg:text-xl text-white/90 leading-relaxed">
-                  Red Road's Audit tool assists clients in effectively communicating opportunities for improvement regarding clinical care, documentation, and compliance with CHAP Standards.
+                  TEXTAS Healthcare's Audit tool assists clients in effectively communicating opportunities for improvement regarding clinical care, documentation, and compliance with CHAP Standards.
                 </p>
               </motion.div>
             </div>
@@ -550,7 +550,7 @@ export default function ClinicalDocumentationReview() {
               
               {/* Testimonial Text */}
               <blockquote className="text-base lg:text-lg text-gray-600 leading-relaxed font-normal font-sans">
-                "The Red Road consulting team is committed to quality assurance and excellence. They utilize a team of experts who focus on the careful review of clinical documentation to assure necessary regulatory criteria are met and the records reflects quality patient care services. The Red Road reviewers provide prompt service with timely feedback and maintain a close working relationship with our quality assurance team."
+                "The TEXTAS Healthcare consulting team is committed to quality assurance and excellence. They utilize a team of experts who focus on the careful review of clinical documentation to assure necessary regulatory criteria are met and the records reflects quality patient care services. The TEXTAS Healthcare reviewers provide prompt service with timely feedback and maintain a close working relationship with our quality assurance team."
               </blockquote>
             </motion.div>
           </div>

@@ -43,7 +43,7 @@ const ContactPage = () => {
                 Contact <span className="text-accent-red">us</span>
               </h1>
               <p className="text-lg text-white/90 max-w-2xl mx-auto">
-                Thank you for your interest in Red Road Healthcare Business Solutions. Leave us your details here and we'll get in touch soon.
+                Thank you for your interest in TEXTAS Healthcare Business Solutions. Leave us your details here and we'll get in touch soon.
               </p>
             </motion.div>
 
@@ -185,7 +185,7 @@ const ContactPage = () => {
               </div>
               <h3 className="text-white font-semibold mb-2">Headquarters</h3>
               <p className="text-white/80 text-sm leading-relaxed">
-                Red Road Health Solutions Pvt Ltd<br />
+                                 TEXTAS Healthcare Solutions Pvt Ltd<br />
                 No.224/215, 2nd floor, Hosur road,<br />
                 Rupena Agrahara, Bengaluru,<br />
                 Karnataka, 560068

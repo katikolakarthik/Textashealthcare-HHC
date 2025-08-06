@@ -56,7 +56,7 @@ const CalculatorsSection = () => {
               transition={{ duration: 0.6, delay: 0.6 }}
               viewport={{ once: true }}
             >
-              Know how much you save with Red Road as your trusted partner
+                             Know how much you save with TEXTAS Healthcare as your trusted partner
             </motion.p>
             
             {/* Calculator Features */}

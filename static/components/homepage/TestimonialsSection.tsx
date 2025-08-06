@@ -10,19 +10,19 @@ const TestimonialsSection = () => {
   const testimonials = [
     {
       role: "Director, Clinical Excellence - Large Hospice Provider",
-      quote: "The Red Road team are amazing partners! We are so grateful for their attention to detail, willingness and flexibility to multitask different job requests, and for providing valuable insights to assist our offices in providing quality care for our clients. Red Road is considered an important part of the Hospice practice."
+                    quote: "The TEXTAS Healthcare team are amazing partners! We are so grateful for their attention to detail, willingness and flexibility to multitask different job requests, and for providing valuable insights to assist our offices in providing quality care for our clients. TEXTAS Healthcare is considered an important part of the Hospice practice."
     },
     {
       role: "Chief Compliance Officer - Mid-Sized Home Health Provider",
-      quote: "The Red Road consulting team is committed to quality assurance and excellence. Red Road utilizes a team of experts who focus on the careful review of clinical documentation to assure necessary regulatory criteria are met and the record reflects quality patient care services. The Red Road reviewers provide prompt service with timely feedback and maintain a close working relationship with our quality assurance team."
+                    quote: "The TEXTAS Healthcare consulting team is committed to quality assurance and excellence. TEXTAS Healthcare utilizes a team of experts who focus on the careful review of clinical documentation to assure necessary regulatory criteria are met and the record reflects quality patient care services. The TEXTAS Healthcare reviewers provide prompt service with timely feedback and maintain a close working relationship with our quality assurance team."
     },
     {
       role: "Division Director, Clinical Support - Large Home Health Care Provider",
-      quote: "Over the last several years, we have established a working relationship with Red Road on projects that included Face to Face (F2F) readiness, Pre-bill Chart Audits, New Clinician Documentation Review and Commercial Insurance, Managed Care, and Medicare ICD 10 coding. The initial results have been promising, the practice has expanded its collaboration with Red Road. This has helped with improving the quality of the documentation significantly. Our regular meetings with the Red Road leadership team helps in open communication, sharing feedback and improving the project outcomes."
+                    quote: "Over the last several years, we have established a working relationship with TEXTAS Healthcare on projects that included Face to Face (F2F) readiness, Pre-bill Chart Audits, New Clinician Documentation Review and Commercial Insurance, Managed Care, and Medicare ICD 10 coding. The initial results have been promising, the practice has expanded its collaboration with TEXTAS Healthcare. This has helped with improving the quality of the documentation significantly. Our regular meetings with the TEXTAS Healthcare leadership team helps in open communication, sharing feedback and improving the project outcomes."
     },
     {
       role: "Director, Medicare Case Management - Large Home Health Care Provider",
-      quote: "Our Medicare Case Management department has had the pleasure of working with Red Road for over 2 years now. They have continued to demonstrate high quality, quick turnaround times, and effective communication with our team. They have worked very closely with us over the past 6 months increasing volumes month over month to meet the needs of our department through these challenging times."
+              quote: "Our Medicare Case Management department has had the pleasure of working with TEXTAS Healthcare for over 2 years now. They have continued to demonstrate high quality, quick turnaround times, and effective communication with our team. They have worked very closely with us over the past 6 months increasing volumes month over month to meet the needs of our department through these challenging times."
     }
   ]
 
