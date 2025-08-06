@@ -150,10 +150,7 @@ export default function CodingOasisReview() {
                   When you are backed by our extensively trained medical coders, with a strong focus on quality and compliance, you get the results you want without the unnecessary costs or headache of managing a large in-house team.
                 </p>
                 
-                {/* Call-to-Action Button */}
-                <button className="bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700 transition-all duration-300 rounded-[40px] py-4 px-8 text-white font-semibold text-lg w-fit shadow-lg hover:shadow-xl transform hover:scale-105 border border-blue-400/30">
-                  Let's Connect
-                </button>
+
               </div>
               
               {/* Right side - Circular image centered */}

@@ -150,16 +150,7 @@ export default function ClinicalDocumentationReview() {
                   Our comprehensive document reviews are only done by Registered Nurses to ensure the highest standards of quality. We review cases remotely and perform all our reviews using our Quality Review Tool software.
                 </p>
                 
-                {/* Call-to-Action Button */}
-                <Link href="/contact">
-                  <motion.button 
-                    className="inline-flex items-center justify-center px-8 py-4 bg-blue-600 text-white font-semibold rounded-full shadow-lg hover:bg-blue-700 transition-colors duration-300 w-fit"
-                    whileHover={{ scale: 1.05 }}
-                    whileTap={{ scale: 0.95 }}
-                  >
-                    Let's Connect
-                  </motion.button>
-                </Link>
+
               </div>
               
               {/* Right side - Circular image centered */}

@@ -13,11 +13,6 @@ const ThreeColumnSection = () => {
       heading: "Contact us",
       subText: "LET'S CONNECT",
       href: "/contact"
-    },
-    {
-      heading: "Careers",
-      subText: "GET STARTED TODAY",
-      href: "/careers"
     }
   ]
 
