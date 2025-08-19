@@ -27,6 +27,10 @@ export default function RootLayout({
           name="keywords"
           content="Home Healthcare, Nursing, Elderly Care, Post-Surgery Care, Rehabilitation, Chronic Care, Personalized Medical Care, Textas Healthcare"
         />
+
+<meta name="google-adsense-account" content="ca-pub-9165803123871431">
+
+
         <meta name="robots" content="index, follow" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta charSet="UTF-8" />
